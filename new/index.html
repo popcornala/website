@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop'Cornala Vocal Ensemble</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include the Google Font link for "Pacifico" -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <!-- Add your custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar with logo aligned left and social media icons aligned right -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Pop'Cornala Logo" width="50" height="50"><span
+                    style="font-family: 'Bangers', cursive; font-size: 35px; padding-left: 20px; vertical-align: middle">Pop'Cornala</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presentation">Présentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#chanteurs">Chanteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#concerts">Concerts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Vidéos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <span class="navbar-text">
+                        Nos réseaux sociaux
+                    </span>
+                    <li class="nav-item">
+                        <a class="social-icon" target="_blank" href="https://www.facebook.com/popcornala"><i
+                                class="fab fa-facebook"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.instagram.com/popcornalamusique/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.youtube.com/@popcornala"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.tiktok.com/@popcornala"><i
+                                class="fab fa-tiktok"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <!-- Full-screen Accueil section with centered image, title, and subtitle -->
+    <div data-bs-spy="scroll">
+        <section id="accueil" class="section">
+            <div class="container text-center">
+                <img src="logo.png" alt="Pop'Cornala Logo" width="400" height="400" class="logo">
+                <h2 class="lead subtitle">
+                    Ensemble vocal<br>a cappella<br>pop-culture
+                </h2>
+            </div>
+        </section>
+
+        <section id="presentation" class="section">
+            <!-- Your content for the Présentation section goes here -->
+        </section>
+
+        <section id="chanteurs" class="section">
+            <!-- Your content for the Chanteurs section goes here -->
+        </section>
+
+        <section id="concerts" class="section">
+            <!-- Your content for the Concerts section goes here -->
+        </section>
+
+        <section id="videos" class="section">
+            <div class="container text-center">
+                <!-- Embed the YouTube playlist here -->
+                <h1>Vidéos</h1>
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <!-- Your content for the Contact section goes here -->
+        </section>
+    </div>
+
+    <!-- Footer with social media links -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- Copyright text with proper alignment -->
+                    <p class="copyright-text">
+                        Copyright &copy; 2023 Pop'Cornala - <a href="#" data-toggle="modal"
+                            data-target="#legalModal">Mentions Légales</a> - Réalisation : Vincent Le Ligeour
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Legal Notice Modal -->
+    <div class="modal fade" id="legalModal" tabindex="-1" role="dialog" aria-labelledby="legalModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="legalModalLabel">Mentions Légales</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2>Mentions Légales</h2>
+
+                    <h3>Nom de l'Association</h3>
+                    <p>Pop'Cornala</p>
+
+                    <h3>Adresse de l'Association</h3>
+                    <p>8a rue de l'Ancre 68330 Huningue</p>
+
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email : contact@popcornala.fr</li>
+                    </ul>
+
+                    <h3>Directeur de la publication</h3>
+                    <p>Vincent Le Ligeour</p>
+
+                    <h3>Hébergeur du site web</h3>
+                    <p>GitHub</p>
+
+                    <h3>Propriété Intellectuelle</h3>
+                    <p>
+                        Le contenu de ce site web, y compris les textes, images, vidéos, et autres éléments, est protégé
+                        par les lois sur la propriété intellectuelle.
+                        Tous les droits de reproduction sont réservés.
+                        Toute utilisation non autorisée du contenu de ce site est strictement interdite.
+                    </p>
+
+                    <h3>Protection des données personnelles</h3>
+                    <p>
+                        Nous nous engageons à protéger la vie privée de nos visiteurs.
+                        Les données personnelles collectées sur ce site web ne sont utilisées qu'à des fins spécifiques
+                        liées à notre activité et
+                        ne seront en aucun cas vendues ou transmises à des tiers sans votre consentement explicite.
+                        Pour plus d'informations sur notre politique de confidentialité, veuillez nous contacter pour
+                        consullter notre politique de confidentialité.
+                    </p>
+
+                    <h3>Liens vers des sites tiers</h3>
+                    <p>
+                        Ce site web peut contenir des liens vers des sites web tiers.
+                        Nous n'assumons aucune responsabilité pour le contenu de ces sites web tiers.
+                        Les liens sont fournis à titre informatif uniquement et ne constituent pas une approbation de
+                        ces sites.
+                    </p>
+
+                    <h3>Cookies</h3>
+                    <p>
+                        Ce site web peut utiliser des cookies pour améliorer l'expérience de navigation de nos
+                        visiteurs.
+                        Pour en savoir plus sur notre utilisation des cookies, veuillez nous contacter pour consulter
+                        notre politique de cookies.
+                    </p>
+
+                    <h3>Droit Applicable</h3>
+                    <p>Ce site web est soumis au droit applicable de [nom de la juridiction] et aux lois internationales
+                        applicables.</p>
+
+                    <h3>Modification des mentions légales</h3>
+                    <p>
+                        Nous nous réservons le droit de modifier ces mentions légales à tout moment.
+                        Toute modification sera publiée sur ce site web.
+                    </p>
+
+                    <p>Dernière mise à jour : 2023</p>
+
+                    <p>Pour toute question concernant nos mentions légales, veuillez nous contacter</p>
+
+                    <p>Date de publication : 2023</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
