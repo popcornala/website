@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    border-radius: 10px;
+}
+
+:root {
+    --color-pink: 255, 102, 196;
+    --color-yellow: 255, 242, 0;
+    --color-green: 126, 217, 87;
+    --color-blue: 82, 113, 255;
+}
+
+.nav-link.active[href='#accueil'] {
+    background-color: rgb(var(--color-pink), 0.5);
+}
+
+.nav-link.active[href='#presentation'] {
+    background-color: rgb(var(--color-yellow), 0.5);
+}
+
+.nav-link.active[href='#chanteurs'] {
+    background-color: rgb(var(--color-green), 0.5);
+}
+
+.nav-link.active[href='#concerts'] {
+    background-color: rgb(var(--color-blue), 0.5);
+}
+
+.nav-link.active[href='#videos'] {
+    background-color: rgb(var(--color-pink), 0.5);
+}
+
+.nav-link.active[href='#presse'] {
+    background-color: rgb(var(--color-yellow), 0.5);
+}
+
+.nav-link.active[href='#contact'] {
+    background-color: rgb(var(--color-green), 0.5);
+}
+
+#accueil {
+    background-color: rgba(var(--color-pink), 0.3);
+}
+
+#presentation {
+    background-color: rgba(var(--color-yellow), 0.3);
+}
+
+#chanteurs {
+    background-color: rgba(var(--color-green), 0.3);
+}
+
+#concerts {
+    background-color: rgba(var(--color-blue), 0.3);
+}
+
+#videos {
+    background-color: rgba(var(--color-pink), 0.3);
+}
+
+#presse {
+    background-color: rgba(var(--color-yellow), 0.3);
+}
+
+#contact {
+    background-color: rgba(var(--color-green), 0.3);
+}
+
+.logo {
+    /*border: 5px solid #fff;*/
+    /* Add a fancy border around the logo */
+    max-width: 100%;
+    max-height: 80%;
+    height: auto;
+    width: auto;
+    border: solid black 3px;
+    border-radius: 50px;
+}
+
+img.apropos {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    border: solid black 5px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.title {
+    font-family: 'Bangers', cursive;
+    /* Apply the "Bangers" font to the title */
+    font-size: 2.5rem;
+    /*color: #fff;*/
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Bangers', cursive;
+    /* Apply the "Bangers" font to the subtitle */
+    font-size: 3.5rem;
+    /*color: #fff;*/
+    padding-top: 35px;
+    vertical-align: middle;
+}
+
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    /*color: #fff;*/
+    /* Section heading text color */
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px 0;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease !important;
+    color: rgba(0, 0, 0, .5)
+}
+
+.social-icon:hover {
+    color: #ff66c4 !important;
+    /* Hover color for social media icons */
+}
+
+/* CSS for Legal Notice Modal */
+.modal-content {
+    background-color: #fff;
+    /* Background color for the modal */
+    border-radius: 0;
+    /* Remove modal border-radius for a cleaner look */
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    /* Adjust modal title font size */
+}
+
+.modal-body {
+    font-size: 1rem;
+    /* Adjust font size for the legal notice content */
+    padding: 20px;
+    overflow-y: auto;
+    /* Add a scrollbar if the content overflows */
+    max-height: 500px;
+    /* Set a max height for the modal content */
+}
+
+.modal-footer {
+    border-top: none;
+    /* Remove the border at the top of the modal footer */
+}
+
+/* Styling for the "Fermer" button in the modal */
+.modal-footer .btn-secondary {
+    background-color: #ff66c4;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    /* Remove button border */
+    border-radius: 0;
+    /* Remove button border-radius */
+}
+
+/* Hover effect for the "Fermer" button */
+.modal-footer .btn-secondary:hover {
+    background-color: #ff3399;
+    /* Button background color on hover */
+}
+
+/* Optional: Add some padding to the legal notice content for better readability */
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+/* CSS for Copyright Text in the Footer */
+.copyright-text {
+    font-size: 0.9rem;
+    /* Adjust font size as needed */
+    margin: 10px 0;
+}
+
+.copyright-text a {
+    color: #fff;
+    /* Link color */
+    text-decoration: none;
+}
+
+.copyright-text a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* CSS for the video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (adjust as needed) */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#presentation p {
+    font-size: 25px;
+}
+
+
+
+.box img,
+.box:after,
+.box:before {
+    width: 100%;
+    transition: all .3s ease 0s;
+}
+.box .icon, .icon li a {
+    text-align: center
+}
+
+.box:after,
+.box:before {
+    content: ""
+}
+
+.box {
+    overflow: hidden
+}
+
+.box .title {
+    letter-spacing: 1px
+}
+
+.box .icon,
+.box .title {
+    margin: 0;
+    position: absolute
+}
+
+.box {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    position: relative
+}
+
+.box:after,
+.box:before {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform-origin: 100% 0;
+    transform: rotateZ(90deg)
+}
+
+.box-yellow:after, .box-yellow:before { background: rgba(var(--color-yellow), .5); }
+.box-pink:after, .box-pink:before { background: rgba(var(--color-pink), .5); }
+.box-green:after, .box-green:before { background: rgba(var(--color-green), .5); }
+.box-blue:after, .box-blue:before { background: rgba(var(--color-blue), .5); }
+
+.box:after {
+    top: auto;
+    bottom: 0;
+    transform-origin: 0 100%
+}
+
+.box:hover:after,
+.box:hover:before {
+    transform: rotateZ(0)
+}
+
+.box img {
+    height: auto;
+    transform: scale(1) rotate(0)
+}
+
+.box:hover img {
+    filter: sepia(80%);
+    transform: scale(1.3) rotate(10deg)
+}
+
+.box .title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    z-index: 2;
+    transform: scale(0);
+    transition: all .5s ease .2s
+}
+
+.box:hover .title {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.box .icon {
+    padding: 7px 5px;
+    list-style: none;
+    background: #004cbf;
+    border-radius: 0 0 0 10px;
+    top: -100%;
+    right: 0;
+    z-index: 2;
+    transition: all .3s ease .2s
+}
+
+.box:hover .icon {
+    top: 0
+}
+
+.box .icon li {
+    display: block;
+    margin: 10px 0
+}
+
+.box .icon li a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    transition: all .3s ease 0s
+}
+
+.box .icon li a:hover {
+    color: #fff;
+    box-shadow: 0 0 10px #000 inset, 0 0 0 3px #fff
+}
+
+@media only screen and (max-width:990px) {
+    .box {
+        margin-bottom: 30px
+    }
+}

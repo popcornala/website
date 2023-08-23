@@ -13,7 +13,9 @@
     <!-- Include the Google Font link for "Pacifico" -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <!-- Add your custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/members.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Pop'Cornala Logo" width="50" height="50"><span
+                <img src="images/logo.png" alt="Pop'Cornala Logo" width="50" height="50"><span
                     style="font-family: 'Bangers', cursive; font-size: 35px; padding-left: 20px; vertical-align: middle">Pop'Cornala</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,10 +35,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#presentation">Présentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presentation">A Propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#chanteurs">Chanteurs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#concerts">Concerts</a></li>
                     <li class="nav-item"><a class="nav-link" href="#videos">Vidéos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presse">Presse</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
@@ -63,7 +66,7 @@
     <div data-bs-spy="scroll">
         <section id="accueil" class="section">
             <div class="container text-center">
-                <img src="logo.png" alt="Pop'Cornala Logo" width="400" height="400" class="logo">
+                <img src="images/logo.png" alt="Pop'Cornala Logo" width="400" height="400" class="logo">
                 <h2 class="lead subtitle">
                     Ensemble vocal<br>a cappella<br>pop-culture
                 </h2>
@@ -72,14 +75,111 @@
 
         <section id="presentation" class="section">
             <!-- Your content for the Présentation section goes here -->
+            <h1>A Propos</h1>
+            <p>
+                <img src="images/photo1.png" alt="En concert" width="400" height="400" class="apropos">
+            </p>
+            <p>
+                Les Pop'Cornala (Petits Pop Corn en Alsacien) sont un groupe vocal a cappella qui
+                réunit ses sept membres autour de deux passions: la Pop Culture et le chant choral.
+            </p>
+            <p>
+                Crée en 2021, le groupe cultive, au fil de ses répétitions hebdomadaires, un joyeux
+                mélange de dessins animés, films, séries télévisées, mèmes d'internet, en alternant
+                nostalgie de leurs enfances sur quatre décennies et actualités pop culturelle brûlante.
+            </p>
+            <p>
+                <img src="images/photo2.png" alt="En concert" width="400" height="400" class="apropos">
+            </p>
+            <p>
+                N'hésitez pas à nous contacter pour animer vos événements!
+            </p>
         </section>
 
         <section id="chanteurs" class="section">
             <!-- Your content for the Chanteurs section goes here -->
+            <h1>Chanteurs</h1>
+            <div class="container">
+                <div class="row mt-40">
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-yellow"> <img src="images/singers/vincent.png" alt="">
+                            <h3 class="title">Vincent</h3>
+                            <h4 class="singer-subtitle">Bary-passe-partout</h4>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-pink"> <img src="images/singers/vincent.png" alt="">
+                            <h3 class="title">Elizabeth</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-green"> <img src="images/singers/isabel.png" alt="">
+                            <h3 class="title">Isabel</h3>
+                            <h4 class="singer-subtitle">Œil du larynx</h4>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-blue"> <img src="images/singers/jerome.png" alt="">
+                            <h3 class="title">Jérôme</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-yellow"> <img src="images/singers/marie.png" alt="">
+                            <h3 class="title">Marie</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-pink"> <img src="images/singers/vincent.png" alt="">
+                            <h3 class="title">Nadine</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-1">
+                        <div class="box box-gren"> <img src="images/singers/vincent.png" alt="">
+                            <h3 class="title">Vince</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-film"></i></a></li>
+                                <li><a href="#"><i class="fa fa-tv"></i></a></li>
+                                <li><a href="#"><i class="fa fa-gamepad"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="concerts" class="section">
             <!-- Your content for the Concerts section goes here -->
+            <h1>Concerts</h1>
         </section>
 
         <section id="videos" class="section">
@@ -96,8 +196,14 @@
             </div>
         </section>
 
+        <section id="presse" class="section">
+            <!-- Your content for the Contact section goes here -->
+            <h1>Nous contacter</h1>
+        </section>
+
         <section id="contact" class="section">
             <!-- Your content for the Contact section goes here -->
+            <h1>Nous contacter</h1>
         </section>
     </div>
 

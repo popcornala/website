@@ -1,0 +1,153 @@
+
+
+.box img,
+.box:after,
+.box:before {
+    width: 100%;
+    transition: all .3s ease 0s;
+}
+.box .icon, .icon li a {
+    text-align: center
+}
+
+.box:after,
+.box:before {
+    content: ""
+}
+
+.box {
+    overflow: hidden
+}
+
+.box .title,
+.box .singer-subtitle {
+    letter-spacing: 1px
+}
+
+.box .icon,
+.box .title,
+.box .singer-subtitle {
+    margin: 0;
+    position: absolute
+}
+
+.box {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    position: relative
+}
+
+.box:after,
+.box:before {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform-origin: 100% 0;
+    transform: rotateZ(90deg)
+}
+
+.box-yellow:after, .box-yellow:before { background: rgba(var(--color-yellow), .5); }
+.box-pink:after, .box-pink:before { background: rgba(var(--color-pink), .5); }
+.box-green:after, .box-green:before { background: rgba(var(--color-green), .5); }
+.box-blue:after, .box-blue:before { background: rgba(var(--color-blue), .5); }
+
+.box:after {
+    top: auto;
+    bottom: 0;
+    transform-origin: 0 100%
+}
+
+.box:hover:after,
+.box:hover:before {
+    transform: rotateZ(0)
+}
+
+.box img {
+    height: auto;
+    transform: scale(1) rotate(0)
+}
+
+.box:hover img {
+    filter: sepia(80%);
+    transform: scale(1.3) rotate(10deg)
+}
+
+.box .title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000;
+    bottom: 30px;
+    left: 10px;
+    opacity: 0;
+    z-index: 2;
+    transform: scale(0);
+    transition: all .5s ease .2s
+}
+
+.box:hover .title {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.box .singer-subtitle {
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    z-index: 3;
+    transform: scale(0);
+    transition: all .5s ease .2s
+}
+
+.box:hover .singer-subtitle {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.box .icon {
+    padding: 7px 5px;
+    list-style: none;
+    background: #004cbf;
+    border-radius: 0 0 0 10px;
+    top: -100%;
+    right: 0;
+    z-index: 2;
+    transition: all .3s ease .2s
+}
+
+.box:hover .icon {
+    top: 0
+}
+
+.box .icon li {
+    display: block;
+    margin: 10px 0
+}
+
+.box .icon li a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    transition: all .3s ease 0s
+}
+
+.box .icon li a:hover {
+    color: #fff;
+    box-shadow: 0 0 10px #000 inset, 0 0 0 3px #fff
+}
+
+@media only screen and (max-width:990px) {
+    .box {
+        margin-bottom: 30px
+    }
+}
