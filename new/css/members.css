@@ -130,7 +130,7 @@
     margin: 10px 0
 }
 
-.box .icon li a {
+.box .icon li i {
     display: block;
     width: 35px;
     height: 35px;
@@ -141,7 +141,7 @@
     transition: all .3s ease 0s
 }
 
-.box .icon li a:hover {
+.box .icon li i:hover {
     color: #fff;
     box-shadow: 0 0 10px #000 inset, 0 0 0 3px #fff
 }
