@@ -257,4 +257,42 @@ footer {
     opacity: 0.6;
     cursor: not-allowed;
     color: rgba(0, 0, 0, .5);
-  }
+}
+
+.is-passed {
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.is-passed img, .to-come img {
+    width: 400px;
+    height: 300px;
+}
+
+.is-passed span {
+    transform: rotate(12deg);
+    color: #555;
+    font-size: 3rem;
+    font-weight: 700;
+    border: 0.25rem solid #555;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    font-family: 'Courier';
+    -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+    /*-webkit-mask-image: url('../images/grunge.png');*/
+    -webkit-mask-size: 944px 604px;
+    /*mix-blend-mode: multiply;*/
+	color: #db0808;
+	border: 0.5rem solid #db0808;
+	-webkit-mask-position: 13rem 6rem;
+	transform: rotate(-14deg);
+    border-radius: 0;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    position: absolute;
+    top:100px;
+    left:0;
+    width:400px;
+}
