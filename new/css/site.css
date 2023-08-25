@@ -295,4 +295,5 @@ footer {
     top:100px;
     left:0;
     width:400px;
+    max-width:100%
 }
