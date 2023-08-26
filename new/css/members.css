@@ -138,7 +138,8 @@
     border-radius: 10px;
     font-size: 18px;
     color: #fff;
-    transition: all .3s ease 0s
+    transition: all .3s ease 0s;
+    cursor: help;
 }
 
 .box .icon li i:hover {
@@ -151,3 +152,17 @@
         margin-bottom: 30px
     }
 }
+
+.custom-tooltip::before {
+    text-decoration: underline;
+    padding: 10px;
+    font-weight:600;
+    background-color: black;
+    color: white;
+}
+
+.custom-tooltip-film::before  { content: "Dernier film ou série vu(e)";}
+.custom-tooltip-anime::before  {content: "(Dessin) animé préféré";}
+.custom-tooltip-game::before  {content: "Jeu vidéo favori";}
+.custom-tooltip-hero::before  {content: "Héro(ïne) de mon enfance";}
+.custom-tooltip-superpower::before  {content: "Super-pouvoir rêvé";}
