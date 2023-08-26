@@ -297,3 +297,17 @@ footer {
     width:400px;
     max-width:100%
 }
+
+.custom-tooltip::before {
+    text-decoration: underline;
+    padding: 10px;
+    font-weight:600;
+    background-color: black;
+    color: white;
+}
+
+.custom-tooltip-film::before  { content: "Dernier film ou série vu(e)";}
+.custom-tooltip-anime::before  {content: "(dessin) animé préféré";}
+.custom-tooltip-game::before  {content: "Jeu vidéo favori";}
+.custom-tooltip-hero::before  {content: "Héro(ine) de mon enfance";}
+.custom-tooltip-superpower::before  {content: "Super-povoir rêvé";}
