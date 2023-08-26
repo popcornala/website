@@ -164,7 +164,7 @@ footer {
     padding: 20px 0;
 }
 
-.social-icon {
+a.social-icon {
     font-size: 1.5rem;
     margin: 0 10px;
     text-decoration: none;
@@ -172,10 +172,24 @@ footer {
     color: rgba(0, 0, 0, .5)
 }
 
-.social-icon:hover {
+a.social-icon:hover {
     color: #ff66c4 !important;
     /* Hover color for social media icons */
 }
+
+ul.social-icon li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+@media (min-width: 992px) {
+    ul.social-icon li {
+      flex-direction: row !important;
+      /*display: none !important;*/
+    }
+  }
 
 
 /* CSS for Copyright Text in the Footer */
