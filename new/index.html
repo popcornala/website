@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop'Cornala Vocal Ensemble</title>
     <!-- icon -->
-    <link rel="icon" href="images/logo.png" />
+    <link rel="icon" href="images/logo.png">
     <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -310,7 +310,7 @@
                                 <span>Passé</span>
                             </div>
                             <p><strong>Festival Lörrach singt / Stimmen, Lörrach <img src="images/flag-germany.svg"
-                                        style="border: 0px" width="30px"></strong></p>
+                                        style="border: 0px" width="30" alt="Allemagne"></strong></p>
                             <p>Samedi 24 juin 2023 de 10h à 17h</p>
                             <p><span>Début de notre carrière internationale dans le<br>cadre de Lörrach singt! (off de
                                     Stimmen)</span></p>
@@ -408,7 +408,8 @@
                         src="https://www.youtube.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                        allowfullscreen
+                        style="border:0"></iframe>
                 </div>
             </div>
         </section>
@@ -570,13 +571,13 @@
         </div>
     </div>
 
-    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="caption"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="model-content text-center"
                 style="max-width: fit-content; width: 100%; position: relative; left: 50%; transform: translate(-50%, 0);">
-                <img src="" class="imagepreview">
-                <h5 id="caption">
+                <img src="#" class="imagepreview" alt="Zoom">
+                <h5 id="caption">caption</h5>
             </div>
         </div>
     </div>
@@ -585,13 +586,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
+    <script>
         $(function () {
             $("[data-bs-toggle='tooltip']").tooltip();
 
             $('.pop').on('click', function () {
-                $('#imagemodal').find('h5').text($(this).find('.figure-caption').text());
-                $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+                var caption = $(this).find('.figure-caption').text();
+                var source = $(this).find('img').attr('src');
+                $('#imagemodal').find('h5').text(caption);
+                $('.imagepreview').attr('alt', caption);
+                $('.imagepreview').attr('src', source);
                 $('#imagemodal').modal('show');
 
             });
