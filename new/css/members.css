@@ -32,8 +32,9 @@
 }
 
 .box {
-    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
-    position: relative
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .box:after,
@@ -102,7 +103,8 @@
     opacity: 0;
     z-index: 3;
     transform: scale(0);
-    transition: all .5s ease .2s
+    transition: all .5s ease .2s;
+    white-space: nowrap;
 }
 
 .box:hover .singer-subtitle {
