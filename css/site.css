@@ -23,7 +23,7 @@ body {
     background-color: rgb(var(--color-yellow), 0.5);
 }
 
-.nav-link.active[href='#chanteurs'] {
+.nav-link.active[href='#membres'] {
     background-color: rgb(var(--color-green), 0.5);
 }
 
@@ -51,7 +51,7 @@ body {
     background-color: rgba(var(--color-yellow), 0.3);
 }
 
-#chanteurs {
+#membres {
     background-color: rgba(var(--color-green), 0.3);
 }
 
