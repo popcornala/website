@@ -48,10 +48,14 @@
     transform: rotateZ(90deg)
 }
 
-.box-yellow:after, .box-yellow:before { background: rgba(var(--color-yellow), .5); }
-.box-pink:after, .box-pink:before { background: rgba(var(--color-pink), .5); }
-.box-green:after, .box-green:before { background: rgba(var(--color-green), .5); }
-.box-blue:after, .box-blue:before { background: rgba(var(--color-blue), .5); }
+.box-force-rose:after, .box-force-rose:before { background: rgba(var(--color-force-rose), .5); }
+.box-force-jaune:after, .box-force-jaune:before { background: rgba(var(--color-force-jaune), .5); }
+.box-force-bleue:after, .box-force-bleue:before { background: rgba(var(--color-force-bleue), .5); }
+.box-force-turquoise:after, .box-force-turquoise:before { background: rgba(var(--color-force-turquoise), .5); }
+.box-force-verte:after, .box-force-verte:before { background: rgba(var(--color-force-verte), .5); }
+.box-force-rouge:after, .box-force-rouge:before { background: rgba(var(--color-force-rouge), .5); }
+.box-force-orange:after, .box-force-orange:before { background: rgba(var(--color-force-orange), .5); }
+.box-force-violette:after, .box-force-violette:before { background: rgba(var(--color-force-violette), .5); }
 
 .box:after {
     top: auto;
