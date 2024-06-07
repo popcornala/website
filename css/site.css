@@ -54,7 +54,23 @@ body {
 
 #accueil {
     background-color: rgba(var(--color-pink), 0.3);
+    background-image: url('../images/background-web.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    position: relative; /* Needed to position the pseudo-element */
+    overflow: hidden; /* Ensures the pseudo-element is contained within the container */
 }
+
+/* Add media queries to switch background properties for smaller screens */
+@media (max-width: 1280px) {
+    #accueil {
+        background-size: contain; /* This will ensure the whole image is visible */
+        background-color: black;  /* Ensure the background color is black */
+        background-position: bottom center; /* Anchor the image at the bottom */
+    }
+}
+
 
 #presentation {
     background-color: rgba(var(--color-yellow), 0.3);
@@ -141,13 +157,34 @@ img.presse {
     margin-bottom: 10px;
 }
 
+
+
 .subtitle {
+    position: relative;
     font-family: 'Bangers', cursive;
-    /* Apply the "Bangers" font to the subtitle */
-    font-size: 3.5rem;
-    /*color: #fff;*/
-    padding-top: 35px;
-    vertical-align: middle;
+    font-size: 3.5rem !important;
+    color: #ddd;
+    text-shadow: 2px 2px 4px #555;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 50px; /* Adjusted padding for better size */
+    border-radius: 30px; /* Rounded corners for softer borders */
+    display: inline-block; /* Ensure the width is only as large as needed */
+    text-align: center; /* Center the text */
+    margin: 10px auto; /* Center the subtitle horizontally */
+    z-index: 2; /* Ensure the subtitle is on top of the shadow */
+}
+
+.subtitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px; /* Match the border radius of the box */
+    box-shadow: 15px 15px 30px rgba(255, 255, 255, 0.65); /* Larger, more blurred, southeast shadow */
+    z-index: -1; /* Ensure the shadow is underneath the box */
+    background: transparent; /* Ensure the shadow is invisible */
 }
 
 /* Section Styles */
