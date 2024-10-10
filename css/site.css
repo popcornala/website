@@ -299,6 +299,10 @@ ul.social-icon li {
     height: auto;
 }
 
+img.flag {
+    border-radius: 0 !important;
+}
+
 .thumbnail p {
     margin-top: 15px !important;
     color: #555;
