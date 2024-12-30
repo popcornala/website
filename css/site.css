@@ -338,7 +338,8 @@ img.flag {
     filter:saturate(0%) sepia(100%) contrast(150%) saturate(150%) grayscale(60%)
 }
 
-.is-passed span {
+.is-passed::after {
+    content: "Passé";
     transform: rotate(12deg);
     color: #555;
     font-size: 3rem;
