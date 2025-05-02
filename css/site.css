@@ -1,103 +1,102 @@
+@import url('colors.css');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--color-text-default);
+    background-color: var(--color-background);
+}
+
+h1 {
+    font-family: "Fredoka", sans-serif;
+    font-size: 3rem;
+}
+
+nav {
+    border-bottom: 2px solid var(--color-text-default) !important;
+}
+
+
+.navbar {
+    background-color: var(--color-background) !important;
+}
+
+.navbar-brand {
+    color: var(--color-text-default) !important;
+}
+
+/* only put a border on the bottom of the navbar-nav on mobile (not on desktop) */
+@media (max-width: 768px) {
+    .navbar-nav {
+        border-bottom: 1px solid var(--color-text-default);
+    }
+}
+
+.navbar-nav {
+    color: var(--color-text-default) !important;
+}
+
+#accordionOldConcerts .accordion-item {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border: solid black 2px !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#accordionOldConcerts .accordion-header {
+    background-color: var(--color-yellow-popcorn) !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .nav-link {
-    border-radius: 10px;
+    color: var(--color-text-default) !important;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
 }
 
-:root {
-    --color-pink: 255, 102, 196;
-    --color-yellow: 255, 242, 0;
-    --color-green: 126, 217, 87;
-    --color-blue: 82, 113, 255;
-
-    --color-force-rose: 255, 102, 196;
-    --color-force-jaune: 255, 242, 0;
-    --color-force-bleue: 82, 113, 255;
-    --color-force-turquoise: 0, 255, 255;
-    --color-force-verte: 126, 217, 87;
-    --color-force-orange: 255, 153, 0;
-    --color-force-rouge: 255, 0, 0;
-    --color-force-violette: 153, 0, 255;
+.nav-link:hover {
+    color: var(--color-blue-cinema) !important;
+    border-top: 1px solid var(--color-blue-cinema);
+    border-bottom: 1px solid var(--color-blue-cinema);
 }
 
-.nav-link.active[href='#accueil'] {
-    background-color: rgb(var(--color-pink), 0.5);
+.nav-link.active {
+    border-top: 1px solid var(--color-pink-bubble);
+    border-bottom: 1px solid var(--color-pink-bubble);
+    color: var(--color-pink-bubble) !important;
 }
 
-.nav-link.active[href='#presentation'] {
-    background-color: rgb(var(--color-yellow), 0.5);
-}
-
-.nav-link.active[href='#membres'] {
-    background-color: rgb(var(--color-green), 0.5);
-}
-
-.nav-link.active[href='#concerts'] {
-    background-color: rgb(var(--color-blue), 0.5);
-}
-
-.nav-link.active[href='#videos'] {
-    background-color: rgb(var(--color-pink), 0.5);
-}
-
-.nav-link.active[href='#presse'] {
-    background-color: rgb(var(--color-yellow), 0.5);
-}
-
-.nav-link.active[href='#contact'] {
-    background-color: rgb(var(--color-green), 0.5);
+.btn-primary {
+    background-color: var(--color-blue-cinema) !important;
 }
 
 #accueil {
-    background-color: rgba(var(--color-pink), 0.3);
     background-image: url('../images/background-web.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 30%;
-    position: relative; /* Needed to position the pseudo-element */
-    overflow: hidden; /* Ensures the pseudo-element is contained within the container */
+    position: relative;
+    /* Needed to position the pseudo-element */
+    overflow: hidden;
+    /* Ensures the pseudo-element is contained within the container */
 }
 
 /* Add media queries to switch background properties for smaller screens */
 @media (max-width: 1280px) {
     #accueil {
-        background-size: contain; /* This will ensure the whole image is visible */
-        background-color: black;  /* Ensure the background color is black */
-        background-position: bottom center; /* Anchor the image at the bottom */
+        background-size: contain;
+        /* This will ensure the whole image is visible */
+        background-color: black;
+        /* Ensure the background color is black */
+        background-position: bottom center;
+        /* Anchor the image at the bottom */
     }
 }
 
-
-#presentation {
-    background-color: rgba(var(--color-yellow), 0.3);
-}
-
-#membres {
-    background-color: rgba(var(--color-green), 0.3);
-}
-
-#concerts {
-    background-color: rgba(var(--color-blue), 0.3);
-}
-
-#videos {
-    background-color: rgba(var(--color-pink), 0.3);
-}
-
-#presse {
-    background-color: rgba(var(--color-yellow), 0.3);
-}
-
-#contact {
-    background-color: rgba(var(--color-green), 0.3);
-}
-
 .logo {
-    /*border: 5px solid #fff;*/
     /* Add a fancy border around the logo */
     max-width: 100%;
     max-height: 90vh;
@@ -158,20 +157,28 @@ img.presse {
 }
 
 
-
 .subtitle {
     position: relative;
     font-family: 'Bangers', cursive;
     font-size: 3.5rem !important;
     color: #ddd;
+    color: var(--color-yellow-popcorn) !important;
     text-shadow: 2px 2px 4px #555;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 50px; /* Adjusted padding for better size */
-    border-radius: 30px; /* Rounded corners for softer borders */
-    display: inline-block; /* Ensure the width is only as large as needed */
-    text-align: center; /* Center the text */
-    margin: 10px auto; /* Center the subtitle horizontally */
-    z-index: 2; /* Ensure the subtitle is on top of the shadow */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 50px;
+    /* Adjusted padding for better size */
+    border-radius: 30px;
+    /* Rounded corners for softer borders */
+    display: inline-block;
+    /* Ensure the width is only as large as needed */
+    text-align: center;
+    /* Center the text */
+    margin: 10px auto;
+    /* Center the subtitle horizontally */
+    z-index: 2;
+    /* Ensure the subtitle is on top of the shadow */
+    border-top: 2px solid var(--color-pink-bubble);
+    border-bottom: 2px solid var(--color-pink-bubble);
 }
 
 .subtitle::before {
@@ -181,32 +188,67 @@ img.presse {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 30px; /* Match the border radius of the box */
-    box-shadow: 15px 15px 30px rgba(255, 255, 255, 0.65); /* Larger, more blurred, southeast shadow */
-    z-index: -1; /* Ensure the shadow is underneath the box */
-    background: transparent; /* Ensure the shadow is invisible */
+    border-radius: 30px;
+    /* Match the border radius of the box */
+    z-index: -1;
+    /* Ensure the shadow is underneath the box */
+    background: transparent;
+    /* Ensure the shadow is invisible */
 }
 
 /* Section Styles */
 .section {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
     text-align: center;
 }
 
+/* special section for desktop */
+@media (min-width: 992px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+section+section::before {
+    content: "";
+    display: block;
+    margin: 5px auto;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 20px;
+    background-image: repeating-radial-gradient(circle,
+            var(--color-blue-cinema) 0px,
+            transparent 8px,
+            transparent 40px);
+    background-repeat: repeat-x;
+    background-size: 30px 20px;
+
+    /* Add fading mask */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    /*color: #fff;*/
-    /* Section heading text color */
+}
+
+/* special h2 for mobile */
+@media (max-width: 768px) {
+    .section h2 {
+        margin-top: 2em;
+    }
 }
 
 /* Footer Styles */
 footer {
+    background-color: var(--color-text-default) !important;
+    color: var(--color-background) !important;
     padding: 20px 0;
 }
 
@@ -215,12 +257,11 @@ a.social-icon {
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease !important;
-    color: rgba(0, 0, 0, .5)
+    color: var(--color-blue-cinema) !important;
 }
 
 a.social-icon:hover {
-    color: #ff66c4 !important;
-    /* Hover color for social media icons */
+    color: var(--color-pink-bubble) !important;
 }
 
 ul.social-icon li {
@@ -232,10 +273,9 @@ ul.social-icon li {
 
 @media (min-width: 992px) {
     ul.social-icon li {
-      flex-direction: row !important;
-      /*display: none !important;*/
+        flex-direction: row !important;
     }
-  }
+}
 
 
 /* CSS for Copyright Text in the Footer */
@@ -275,6 +315,13 @@ ul.social-icon li {
 
 #presentation p {
     font-size: 25px;
+    text-align: justify;
+}
+
+#presentation figure,
+#presentation img {
+    width: 100%;
+    max-height: none;
 }
 
 .thumbnail {
@@ -326,17 +373,18 @@ img.flag {
 
 .is-passed {
     position: relative;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
-.is-passed img, .to-come img {
+.is-passed img,
+.to-come img {
     width: 400px;
     height: 300px;
 }
 
 .is-passed img {
-    filter:saturate(0%) sepia(100%) contrast(150%) saturate(150%) grayscale(60%)
+    filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%) grayscale(60%)
 }
 
 .is-passed::after {
@@ -352,18 +400,15 @@ img.flag {
     border-radius: 1rem;
     font-family: 'Courier';
     -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
-    /*-webkit-mask-image: url('../images/grunge.png');*/
     -webkit-mask-size: 944px 604px;
-    /*mix-blend-mode: multiply;*/
-	color: #db0808;
-	border: 0.5rem solid #db0808;
-	-webkit-mask-position: 13rem 6rem;
-	transform: rotate(-14deg);
+    color: #db0808;
+    border: 0.5rem solid #db0808;
+    -webkit-mask-position: 13rem 6rem;
+    transform: rotate(-14deg);
     border-radius: 0;
-    /*background-color: rgba(255, 255, 255, 0.5);*/
     position: absolute;
-    top:100px;
-    left:0;
-    width:400px;
-    max-width:100%
+    top: 100px;
+    left: 0;
+    width: 400px;
+    max-width: 100%
 }
