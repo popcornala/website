@@ -30,14 +30,12 @@
 
     <!-- Navbar with logo aligned left and social media icons aligned right -->
     <nav class="navbar navbar-expand-lg fixed-top bg-light py-2">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
+        <div class="container-fluid flex-between">
 
             <!-- Logo (left) -->
-            <a class="navbar-brand d-flex align-items-center mb-0" href="#">
+            <a class="navbar-brand flex-center mb-0" href="#">
                 <img loading="lazy" src="images/logo.png" alt="Pop'Cornala Logo" width="50" height="50">
-                <span style="font-family: 'Bangers', cursive; font-size: 30px; padding-left: 10px;">
-                    Pop'Cornala
-                </span>
+                <span class="logo-text">Pop'Cornala</span>
             </a>
 
             <!-- Toggler (for mobile) -->
@@ -52,7 +50,7 @@
                 id="navbarSupportedContent">
 
                 <!-- Center menu -->
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <ul class="navbar-center-menu">
                     <li class="nav-item"><a class="nav-link px-2" href="#accueil">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link px-2" href="#presentation">A Propos</a></li>
                     <li class="nav-item"><a class="nav-link px-2" href="#membres">Membres</a></li>
@@ -63,7 +61,7 @@
                 </ul>
 
                 <!-- Right: Social links -->
-                <div class="d-flex align-items-center flex-column flex-lg-row gap-2">
+                <div class="social-links-container">
                     <span class="small">Nos réseaux sociaux</span>
                     <div class="d-flex gap-2">
                         <a class="social-icon" target="_blank" href="https://www.facebook.com/popcornala"><i
@@ -89,15 +87,14 @@
                 <div class="hero-content fade-in-up">
                     <div class="subtitle">
                         Pop'Cornala<br>
-                        <img src="images/logo.png" alt="Pop'Cornala Logo" class="bounce"
-                            style="padding: 1rem 0; width: auto; height: 120px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));"><br>
+                        <img src="images/logo.png" alt="Pop'Cornala Logo" class="bounce hero-logo"><br>
                         Ensemble vocal<br>
                         a cappella<br>
                         pop-culture
                     </div>
-                    <div class="hero-cta" style="margin-top: 2rem;">
-                        <a href="#presentation" class="btn btn-primary btn-lg pulse" style="margin: 0.5rem;">Découvrir le groupe</a>
-                        <a href="#concerts" class="btn btn-outline-primary btn-lg" style="margin: 0.5rem;">Nos concerts</a>
+                    <div class="hero-cta-container">
+                        <a href="#presentation" class="btn btn-primary btn-lg pulse hero-cta-button">Découvrir le groupe</a>
+                        <a href="#concerts" class="btn btn-outline-primary btn-lg hero-cta-button">Nos concerts</a>
                     </div>
                 </div>
             </div>
@@ -108,7 +105,7 @@
                 <h1 class="fade-in-up">À Propos</h1>
                 <div class="card-modern fade-in-up">
                 <figure class="figure pop">
-                    <img src="images/photo1.png" alt="En concert" class="figure-img img-fluid rounded apropos">
+                    <img src="images/photo1.png" alt="En concert" class="figure-image apropos">
                     <figcaption class="figure-caption">Durant notre premier concert à la Halle au Blé d'Altkirch (Photo
                         de Fabrice Chevroton).
                     </figcaption>
@@ -123,14 +120,14 @@
                     nostalgie de leurs enfances sur quatre décennies et actualités pop culturelles brûlantes.
                 </p>
                 <div class="row">
-                    <div class="col-md-6 d-flex align-items-center">
+                    <div class="two-column-layout">
                         <figure class="figure pop">
                             <img src="images/photo2.png" alt="En cascade" class="figure-img img-fluid rounded apropos">
                             <figcaption class="figure-caption">Une belle cascade de popcorn (Photo de Kevin C.).
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-md-6 d-flex align-items-center">
+                    <div class="two-column-layout">
                         <figure class="figure pop">
                             <img src="images/photo3.png" alt="En couleur" class="figure-img img-fluid rounded apropos">
                             <figcaption class="figure-caption">On chante maintenant en Technicolor.</figcaption>
@@ -153,9 +150,9 @@
         <section id="membres" class="section">
             <div class="container">
                 <h1 class="fade-in-up">Membres</h1>
-                <p class="fade-in-up" style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--color-text-default); opacity: 0.8;">Découvrez les talents qui composent Pop'Cornala, chacun avec sa personnalité unique et ses passions pop-culture !</p>
+                <p class="fade-in-up section-intro">Découvrez les talents qui composent Pop'Cornala, chacun avec sa personnalité unique et ses passions pop-culture !</p>
                 <div class="row mt-5 justify-content-center fade-in-up">
-                    <div class="col-md-4 col-sm-6 p-2">
+                    <div class="member-card">
                         <div class="box box-force-rose"> <img src="images/singers/elizabeth.png" alt="Elizabeth">
                             <h3 class="title">Elizabeth</h3>
                             <h4 class="singer-subtitle">Alto dans le déni profond</h4>
@@ -179,7 +176,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
+                    <div class="member-card">
                         <div class="box box-force-jaune"> <img src="images/singers/isabel.png" alt="Isabel">
                             <h3 class="title">Isabel</h3>
                             <h4 class="singer-subtitle">Œil de larynx</h4>
@@ -351,16 +348,17 @@
         </section>
 
         <div class="section-divider">
-            <div class="divider-line"></div>
+            <div class="divider-line divider-left"></div>
             <div class="divider-icon">🍿</div>
+            <div class="divider-line divider-right"></div>
         </div>
 
         <section id="concerts" class="section">
             <div class="container">
                 <h1 class="fade-in-up">Concerts</h1>
-                <p class="fade-in-up" style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--color-text-default); opacity: 0.8;">Retrouvez-nous en concert pour une expérience musicale unique mêlant pop-culture et harmonies vocales !</p>
+                <p class="fade-in-up section-intro">Retrouvez-nous en concert pour une expérience musicale unique mêlant pop-culture et harmonies vocales !</p>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2099-12-31">
+                    <div class="concert-card" data-concert-date="2099-12-31">
                         <div class="thumbnail">
                             <div class="to-come">
                                 <img src="images/concerts/prochainement.png" alt="Prochainement">
@@ -432,8 +430,8 @@
                             <div class="is-passed">
                                 <img src="images/concerts/festival_pop_fiction.png" alt="Festival Pop Fiction">
                             </div>
-                            <p><strong>Festival Pop Fiction, Erstein <img class="flag" src="images/flag-bas-rhin.svg"
-                                        style="border: 0px" alt="Bas-Rhin"></strong></p>
+                            <p><strong>Festival Pop Fiction, Erstein <img class="flag flag-icon" src="images/flag-bas-rhin.svg"
+                                        alt="Bas-Rhin"></strong></p>
                             <p>Weekend du 3 et 4 mai 2025</p>
                             <p><span>Les Pop'Cornala redeviennent<br>les Pop'Cornele</span></p>
                             <a class="social-icon" target="_blank" href="https://festival-pop-fiction.fr/"><i
@@ -517,7 +515,7 @@
             <div class="container">
                 <div class="accordion" id="accordionOldConcerts">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOldConcerts" style="margin-bottom: 0px;">
+                        <h2 class="accordion-header accordion-header-spacing" id="headingOldConcerts">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOldConcerts" aria-expanded="false"
                                 aria-controls="collapseOldConcerts">
@@ -556,8 +554,7 @@
                                                 <img src="images/concerts/hoplawards.png" alt="Hopl'Awards">
                                             </div>
                                             <p><strong>Hopl'Awards 2024, Strasbourg <img class="flag"
-                                                        src="images/flag-bas-rhin.svg" style="border: 0px" width="30"
-                                                        alt="Bas-Rhin"></strong></p>
+                                                        src="images/flag-bas-rhin.svg" class="flag-icon-large"                                                        alt="Bas-Rhin"></strong></p>
                                             <p>Vendredi 11 octobre 2024</p>
                                             <p><span>Les Pop'Cornala à une remise de prix<br>pour le show in the middle
                                                     of the show</span></p>
@@ -584,7 +581,7 @@
                                                 <img src="images/concerts/triforce.png" alt="Triforce">
                                             </div>
                                             <p><strong>Espace Jean Dame, Paris 2e Arr. <img class="flag"
-                                                        src="images/flag-paris.svg" style="border: 0px" width="30"
+                                                        src="images/flag-paris.svg" class="flag-icon-large" width="30"
                                                         alt="Paris"></strong></p>
                                             <p>Samedi 29 juin 2024 à 19h30</p>
                                             <p><span>Concert de la Triforce<br>avec The Q-Team et les Negitachi</span>
@@ -650,7 +647,7 @@
                                                     alt="Festival Pop Fiction">
                                             </div>
                                             <p><strong>Festival Pop Fiction, Erstein <img class="flag"
-                                                        src="images/flag-bas-rhin.svg" style="border: 0px" width="30"
+                                                        src="images/flag-bas-rhin.svg" class="flag-icon-large"
                                                         alt="Bas-Rhin"></strong></p>
                                             <p>Dimanche 1er octobre 2023 de 11h à 15h</p>
                                             <p><span>Les Pop'Cornala deviennent pour la<br>première fois les
@@ -679,7 +676,7 @@
                                                 <img src="images/concerts/stimmen.png" alt="Lörrach singt">
                                             </div>
                                             <p><strong>Festival Lörrach singt / Stimmen, Lörrach <img class="flag"
-                                                        src="images/flag-germany.svg" style="border: 0px" width="30"
+                                                        src="images/flag-germany.svg" class="flag-icon-large" width="30"
                                                         alt="Allemagne"></strong></p>
                                             <p>Samedi 24 juin 2023 de 10h à 17h</p>
                                             <p><span>Début de notre carrière internationale dans le<br>cadre de Lörrach
@@ -775,27 +772,29 @@
         </section>
 
         <div class="section-divider">
-            <div class="divider-line"></div>
+            <div class="divider-line divider-left"></div>
             <div class="divider-icon">🍿</div>
+            <div class="divider-line divider-right"></div>
         </div>
 
         <section id="videos" class="section">
             <div class="container text-center">
                 <h1 class="fade-in-up">Vidéos</h1>
-                <p class="fade-in-up" style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--color-text-default); opacity: 0.8;">Plongez dans notre univers musical à travers nos performances en vidéo !</p>
+                <p class="fade-in-up section-intro">Plongez dans notre univers musical à travers nos performances en vidéo !</p>
                 <div class="video-container">
                     <iframe width="560" height="315"
                         src="https://www.youtube.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen style="border:0"></iframe>
+                        allowfullscreen class="video-embed"></iframe>
                 </div>
             </div>
         </section>
 
         <div class="section-divider">
-            <div class="divider-line"></div>
+            <div class="divider-line divider-left"></div>
             <div class="divider-icon">🍿</div>
+            <div class="divider-line divider-right"></div>
         </div>
 
         <section id="presse" class="section">
@@ -817,14 +816,15 @@
         </section>
 
         <div class="section-divider">
-            <div class="divider-line"></div>
+            <div class="divider-line divider-left"></div>
             <div class="divider-icon">🍿</div>
+            <div class="divider-line divider-right"></div>
         </div>
 
         <section id="contact" class="section">
             <div class="container">
                 <h1 class="fade-in-up">Nous contacter</h1>
-                <p class="fade-in-up" style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--color-text-default); opacity: 0.8;">Une question ? Un projet ? Nous serions ravis d'échanger avec vous !</p>
+                <p class="fade-in-up section-intro">Une question ? Un projet ? Nous serions ravis d'échanger avec vous !</p>
                 <div class="card-modern fade-in-up">
             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgejklkb"
                 method="post" class="form-horizontal needs-validation" novalidate>
@@ -847,7 +847,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <textarea rows="5" name="message" id="message" placeholder="Un gentil petit message" required
-                            class="form-control" style="height:100%;" minlength="10">
+                            class="form-control contact-form-textarea" minlength="10">
                         </textarea>
                         <div class="invalid-feedback">
                             Veuillez entrer un message (au moins 10 caractères).
@@ -857,7 +857,7 @@
                     <input type="hidden" name="_subject" id="email-subject"
                         value="Demande de contact sur http://www.popcornala.fr">
                 </fieldset>
-                <button type="submit" class="btn btn-primary" style="width: 100%"><i
+                <button type="submit" class="btn btn-primary full-width-button"><i
                         class="fa fa-envelope-circle-check fa-beat"></i> Envoyer</button>
                 <p>Vous pouvez aussi nous contacter par message privé sur nos réseaux sociaux.</p>
             </form>
@@ -873,7 +873,7 @@
                 <div class="col">
                     Remerciements à :<br>
                     <a href="https://www.huningue.fr/" target="_blank"><img src="images/logo_huningue.jpg"
-                            alt="Ville de Huningue" class="logo" style="width: 100px;"></a>
+                            alt="Ville de Huningue" class="logo sponsor-logo"></a>
                 </div>
             </div>
             <div class="row">
@@ -981,7 +981,7 @@
         </div>
     </div>
 
-    <div id="imagemodal" class="image-modal" style="display: none;">
+    <div id="imagemodal" class="image-modal">
         <div class="image-modal-overlay">
             <div class="image-modal-container">
                 <img src="#" class="imagepreview" alt="Zoom">
