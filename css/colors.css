@@ -1,9 +1,22 @@
+/* ===================================
+   COLOR PALETTE
+   =================================== */
+
 :root {
+    /* === Brand Colors === */
+    --color-background: rgb(255, 248, 219);
+    --color-text-default: rgb(23, 55, 102);
+    --color-yellow-popcorn: rgb(254, 201, 12);
+    --color-blue-cinema: rgb(41, 131, 190);
+    --color-pink-bubble: rgb(234, 86, 120);
+
+    /* === Legacy Base Colors === */
     --color-pink: 255, 102, 196;
     --color-yellow: 255, 242, 0;
     --color-green: 126, 217, 87;
     --color-blue: 82, 113, 255;
 
+    /* === Member Force Colors === */
     --color-force-rose: 255, 102, 196;
     --color-force-jaune: 255, 242, 0;
     --color-force-bleue: 82, 113, 255;
@@ -12,11 +25,4 @@
     --color-force-orange: 255, 153, 0;
     --color-force-rouge: 255, 0, 0;
     --color-force-violette: 153, 0, 255;
-
-    /* new palette */
-    --color-background: rgb(255, 248, 219);
-    --color-text-default: rgb(23, 55, 102);
-    --color-yellow-popcorn: rgb(254, 201, 12);
-    --color-blue-cinema: rgb(41, 131, 190);
-    --color-pink-bubble: rgb(234, 86, 120);
 }

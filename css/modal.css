@@ -1,50 +1,41 @@
-/* CSS for Legal Notice Modal */
+/* ===================================
+   MODAL COMPONENTS
+   =================================== */
+
+/* === Base Modal Styles === */
 .modal-content {
     background-color: #fff;
-    /* Background color for the modal */
     border-radius: 0;
-    /* Remove modal border-radius for a cleaner look */
 }
 
 .modal-title {
     font-size: 1.5rem;
-    /* Adjust modal title font size */
 }
 
 .modal-body {
     font-size: 1rem;
-    /* Adjust font size for the legal notice content */
     padding: 20px;
     overflow-y: auto;
-    /* Add a scrollbar if the content overflows */
     max-height: 500px;
-    /* Set a max height for the modal content */
 }
 
 .modal-footer {
     border-top: none;
-    /* Remove the border at the top of the modal footer */
 }
 
-/* Styling for the "Fermer" button in the modal */
+/* === Modal Buttons === */
 .modal-footer .btn-secondary {
     background-color: #ff66c4;
-    /* Button background color */
     color: #fff;
-    /* Button text color */
     border: none;
-    /* Remove button border */
     border-radius: 0;
-    /* Remove button border-radius */
 }
 
-/* Hover effect for the "Fermer" button */
 .modal-footer .btn-secondary:hover {
     background-color: #ff3399;
-    /* Button background color on hover */
 }
 
-/* Optional: Add some padding to the legal notice content for better readability */
+/* === Modal Text Content === */
 .modal-body p {
     margin-bottom: 10px;
 }
