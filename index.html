@@ -4,23 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop'Cornala Vocal Ensemble</title>
-    <!-- icon -->
-    <link rel="icon" href="images/logo.png">
-    <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- Add Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Include the Google Font link -->
+
+    <!-- SEO Meta Tags -->
+    <title>Pop'Cornala - Ensemble Vocal A Cappella Pop-Culture en Alsace</title>
+    <meta name="description" content="Pop'Cornala, ensemble vocal a cappella de 7 membres en Alsace. Concerts mêlant pop-culture, dessins animés, films et séries. Spectacles uniques et divertissants.">
+    <meta name="keywords" content="pop cornala, a cappella, chant choral, alsace, pop culture, concert, ensemble vocal, huningue, mulhouse">
+    <meta name="author" content="Pop'Cornala">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.popcornala.fr/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.popcornala.fr/">
+    <meta property="og:title" content="Pop'Cornala - Ensemble Vocal A Cappella Pop-Culture">
+    <meta property="og:description" content="Ensemble vocal a cappella de 7 membres en Alsace, mêlant pop-culture et harmonies vocales dans des concerts uniques et divertissants.">
+    <meta property="og:image" content="https://www.popcornala.fr/images/photo1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Pop'Cornala">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.popcornala.fr/">
+    <meta property="twitter:title" content="Pop'Cornala - Ensemble Vocal A Cappella Pop-Culture">
+    <meta property="twitter:description" content="Ensemble vocal a cappella de 7 membres en Alsace, mêlant pop-culture et harmonies vocales.">
+    <meta property="twitter:image" content="https://www.popcornala.fr/images/photo1.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Pop'Cornala",
+        "alternateName": "Petits Pop Corn",
+        "description": "Ensemble vocal a cappella de 7 membres mêlant pop-culture et chant choral",
+        "url": "https://www.popcornala.fr",
+        "logo": "https://www.popcornala.fr/images/logo.png",
+        "image": "https://www.popcornala.fr/images/photo1.png",
+        "foundingDate": "2021",
+        "genre": ["A cappella", "Pop Culture", "Chant choral"],
+        "numberOfMembers": 7,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8a rue de l'Ancre",
+            "addressLocality": "Huningue",
+            "postalCode": "68330",
+            "addressCountry": "FR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@popcornala.fr",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/popcornala",
+            "https://www.instagram.com/popcornalamusique/",
+            "https://www.youtube.com/@popcornala",
+            "https://www.tiktok.com/@popcornala"
+        ]
+    }
+    </script>
+
+    <!-- Bootstrap CSS (Latest Version) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts (preload for performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- Add your custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/members.css">
@@ -29,11 +96,11 @@
 <body>
 
     <!-- Navbar with logo aligned left and social media icons aligned right -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-light py-2">
-        <div class="container-fluid flex-between">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2">
+        <div class="container-fluid">
 
             <!-- Logo (left) -->
-            <a class="navbar-brand flex-center mb-0" href="#">
+            <a class="navbar-brand d-flex align-items-center mb-0" href="#">
                 <img loading="lazy" src="images/logo.png" alt="Pop'Cornala Logo" width="50" height="50">
                 <span class="logo-text">Pop'Cornala</span>
             </a>
@@ -45,36 +112,35 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Center menu + right social (inside collapse) -->
-            <div class="collapse navbar-collapse justify-content-between align-items-center"
-                id="navbarSupportedContent">
-
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <!-- Center menu -->
-                <ul class="navbar-center-menu">
-                    <li class="nav-item"><a class="nav-link px-2" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#presentation">A Propos</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#membres">Membres</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#concerts">Concerts</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#videos">Vidéos</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#presse">Presse</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="#contact">Contact</a></li>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presentation">A Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#membres">Membres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#concerts">Concerts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Vidéos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presse">Presse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+            </div>
 
-                <!-- Right: Social links -->
+            <!-- Right: Social links (only on desktop) -->
+            <div class="d-none d-lg-flex">
                 <div class="social-links-container">
                     <span class="small">Nos réseaux sociaux</span>
                     <div class="d-flex gap-2">
-                        <a class="social-icon" target="_blank" href="https://www.facebook.com/popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.facebook.com/popcornala"><i
                                 class="fab fa-facebook"></i></a>
-                        <a class="social-icon" target="_blank" href="https://www.instagram.com/popcornalamusique/"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/popcornalamusique/"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="social-icon" target="_blank" href="https://www.youtube.com/@popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.youtube.com/@popcornala"><i
                                 class="fab fa-youtube"></i></a>
-                        <a class="social-icon" target="_blank" href="https://www.tiktok.com/@popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.tiktok.com/@popcornala"><i
                                 class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </nav>
@@ -105,7 +171,7 @@
                 <h1 class="fade-in-up">À Propos</h1>
                 <div class="card-modern fade-in-up">
                 <figure class="figure pop">
-                    <img src="images/photo1.png" alt="En concert" class="figure-image apropos">
+                    <img loading="lazy" src="images/photo1.png" alt="En concert" class="figure-image apropos">
                     <figcaption class="figure-caption">Durant notre premier concert à la Halle au Blé d'Altkirch (Photo
                         de Fabrice Chevroton).
                     </figcaption>
@@ -122,14 +188,14 @@
                 <div class="presentation-images">
                     <div class="presentation-image-column">
                         <figure class="figure pop">
-                            <img src="images/photo2.png" alt="En cascade" class="apropos">
+                            <img loading="lazy" src="images/photo2.png" alt="En cascade" class="apropos">
                             <figcaption class="figure-caption">Une belle cascade de popcorn (Photo de Kevin C.).
                             </figcaption>
                         </figure>
                     </div>
                     <div class="presentation-image-column">
                         <figure class="figure pop">
-                            <img src="images/photo3.png" alt="En couleur" class="apropos">
+                            <img loading="lazy" src="images/photo3.png" alt="En couleur" class="apropos">
                             <figcaption class="figure-caption">On chante maintenant en Technicolor.</figcaption>
                         </figure>
                     </div>
@@ -153,7 +219,7 @@
                 <p class="fade-in-up section-intro">Découvrez les talents qui composent Pop'Cornala, chacun avec sa personnalité unique et ses passions pop-culture !</p>
                 <div class="row mt-5 justify-content-center fade-in-up">
                     <div class="member-card">
-                        <div class="box box-force-rose"> <img src="images/singers/elizabeth.png" alt="Elizabeth">
+                        <div class="box box-force-rose"> <img loading="lazy" src="images/singers/elizabeth.png" alt="Elizabeth">
                             <h3 class="title">Elizabeth</h3>
                             <h4 class="singer-subtitle">Alto dans le déni profond</h4>
                             <ul class="icon">
@@ -177,7 +243,7 @@
                         </div>
                     </div>
                     <div class="member-card">
-                        <div class="box box-force-jaune"> <img src="images/singers/isabel.png" alt="Isabel">
+                        <div class="box box-force-jaune"> <img loading="lazy" src="images/singers/isabel.png" alt="Isabel">
                             <h3 class="title">Isabel</h3>
                             <h4 class="singer-subtitle">Œil de larynx</h4>
                             <ul class="icon">
@@ -199,8 +265,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-verte"> <img src="images/singers/jerome.png" alt="Jérôme">
+                    <div class="member-card">
+                        <div class="box box-force-verte"> <img loading="lazy" src="images/singers/jerome.png" alt="Jérôme">
                             <h3 class="title">Jérôme</h3>
                             <h4 class="singer-subtitle">Cherche à escalader l'Himalaya</h4>
                             <ul class="icon">
@@ -224,8 +290,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-bleue"> <img src="images/singers/marie.png" alt="Marie">
+                    <div class="member-card">
+                        <div class="box box-force-bleue"> <img loading="lazy" src="images/singers/marie.png" alt="Marie">
                             <h3 class="title">Marie</h3>
                             <h4 class="singer-subtitle">Karaoké sur pattes</h4>
                             <ul class="icon">
@@ -248,8 +314,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-turquoise"> <img src="images/singers/nadine.png" alt="Nadine">
+                    <div class="member-card">
+                        <div class="box box-force-turquoise"> <img loading="lazy" src="images/singers/nadine.png" alt="Nadine">
                             <h3 class="title">Nadine</h3>
                             <h4 class="singer-subtitle">Mezzo-sopralto</h4>
                             <ul class="icon">
@@ -272,8 +338,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-violette"> <img src="images/singers/sebastian.png" alt="Sebastian">
+                    <div class="member-card">
+                        <div class="box box-force-violette"> <img loading="lazy" src="images/singers/sebastian.png" alt="Sebastian">
                             <h3 class="title">Sebastian</h3>
                             <h4 class="singer-subtitle">Percussions</h4>
                             <ul class="icon">
@@ -296,8 +362,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-orange"> <img src="images/singers/vince.png" alt="Vince">
+                    <div class="member-card">
+                        <div class="box box-force-orange"> <img loading="lazy" src="images/singers/vince.png" alt="Vince">
                             <h3 class="title">Vince</h3>
                             <h4 class="singer-subtitle">From the deep forest</h4>
                             <ul class="icon">
@@ -320,8 +386,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 p-2">
-                        <div class="box box-force-rouge"> <img src="images/singers/vincent.png" alt="Vincent">
+                    <div class="member-card">
+                        <div class="box box-force-rouge"> <img loading="lazy" src="images/singers/vincent.png" alt="Vincent">
                             <h3 class="title">Vincent</h3>
                             <h4 class="singer-subtitle">Bary-passe-partout</h4>
                             <ul class="icon">
@@ -361,7 +427,7 @@
                     <div class="concert-card" data-concert-date="2099-12-31">
                         <div class="thumbnail">
                             <div class="to-come">
-                                <img src="images/concerts/prochainement.png" alt="Prochainement">
+                                <img loading="lazy" src="images/concerts/prochainement.png" alt="Prochainement">
                             </div>
                             <p><strong>Quelque part en Alsace</strong></p>
                             <p>Prochainement</p>
@@ -373,13 +439,13 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-09-05">
                         <div class="thumbnail">
                             <div class="to-come">
-                                <img src="images/concerts/acappella-pop-show.png" alt="Concert de la Biforce">
+                                <img loading="lazy" src="images/concerts/acappella-pop-show.png" alt="Concert de la Biforce">
                             </div>
                             <p><strong>A cappella Pop Show, Huningue</strong></p>
                             <p>Weekend du 4 et 5 octobre 2025</p>
                             <p><span>Des poireaux, du popcorn, du fun<br>avec la chorale parisienne des <a
-                                        href="https://www.negitachi.fr" target="_blank">Negitachi</a></span></p>
-                            <a class="social-icon" target="_blank"
+                                        href="https://www.negitachi.fr" target="_blank" rel="noopener">Negitachi</a></span></p>
+                            <a class="social-icon" target="_blank" rel="noopener"
                                 href="https://www.popcornala.fr/acps">
                                 <i class="fas fa-ticket fa-beat"></i>
                             </a>
@@ -388,7 +454,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-06-28">
                         <div class="thumbnail">
                             <div class="to-come">
-                                <img src="images/concerts/sierentz.png" alt="Sierentz">
+                                <img loading="lazy" src="images/concerts/sierentz.png" alt="Sierentz">
                             </div>
                             <p><strong>La Citadelle, Sierentz</strong></p>
                             <p>Samedi 28 juin 2025 à 16h</p>
@@ -400,12 +466,12 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-05-17">
                         <div class="thumbnail">
                             <div class="to-come">
-                                <img src="images/concerts/geek-factory.png" alt="Geek Factory">
+                                <img loading="lazy" src="images/concerts/geek-factory.png" alt="Geek Factory">
                             </div>
                             <p><strong>Geek Factory, Mulhouse</strong></p>
                             <p>Samedi 17 mai 2025 à 18h30</p>
                             <p><span>Un pop quiz en préchauffe<br>de la finale de l'Eurovision</span></p>
-                            <a class="social-icon" target="_blank"
+                            <a class="social-icon" target="_blank" rel="noopener"
                                 href="https://www.instagram.com/geekfactory.mulhouse/">
                                 <i class="fab fa-instagram fa-beat"></i>
                             </a>
@@ -415,12 +481,12 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-05-10">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/dans-les-pas-de-charline.png" alt="Dans les pas de Charline">
+                                <img loading="lazy" src="images/concerts/dans-les-pas-de-charline.png" alt="Dans les pas de Charline">
                             </div>
                             <p><strong>Salle des fêtes, Stetten</strong></p>
                             <p>Samedi 10 mai 2025 à 20h</p>
                             <p><span>Les Pop'Cornala en deuxième partie<br>d'un concert caritatif</span></p>
-                            <a class="social-icon" target="_blank" href="http://www.danslespasdecharline.fr/"><i
+                            <a class="social-icon" target="_blank" rel="noopener" href="http://www.danslespasdecharline.fr/"><i
                                     class="fas fa-globe fa-beat"></i></a>
                             </a>
                         </div>
@@ -428,20 +494,20 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-05-04">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/festival_pop_fiction.png" alt="Festival Pop Fiction">
+                                <img loading="lazy" src="images/concerts/festival_pop_fiction.png" alt="Festival Pop Fiction">
                             </div>
                             <p><strong>Festival Pop Fiction, Erstein <img class="flag flag-icon" src="images/flag-bas-rhin.svg"
                                         alt="Bas-Rhin"></strong></p>
                             <p>Weekend du 3 et 4 mai 2025</p>
                             <p><span>Les Pop'Cornala redeviennent<br>les Pop'Cornele</span></p>
-                            <a class="social-icon" target="_blank" href="https://festival-pop-fiction.fr/"><i
+                            <a class="social-icon" target="_blank" rel="noopener" href="https://festival-pop-fiction.fr/"><i
                                     class="fas fa-globe fa-beat"></i></a>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-04-06">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/geek-factory.png" alt="Geek Factory">
+                                <img loading="lazy" src="images/concerts/geek-factory.png" alt="Geek Factory">
                             </div>
                             <p><strong>Geek Factory, Mulhouse</strong></p>
                             <p>Dimanche 6 avril 2025 à 14h</p>
@@ -453,7 +519,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-03-28">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/kembs-mediatheque.png" alt="Au Fil des Mots">
+                                <img loading="lazy" src="images/concerts/kembs-mediatheque.png" alt="Au Fil des Mots">
                             </div>
                             <p><strong>Médiathèque Au Fil des Mots, Kembs</strong></p>
                             <p>Vendredi 28 mars 2025 à 19h</p>
@@ -465,12 +531,12 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-03-14">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/la-clef.png" alt="Association La Clef">
+                                <img loading="lazy" src="images/concerts/la-clef.png" alt="Association La Clef">
                             </div>
                             <p><strong>Association La Clef, Bartenheim</strong></p>
                             <p>Vendredi 14 mars 2025 à 19h30</p>
                             <p><span>Concert/Blindtest<br>derière la mairie</span></p>
-                            <a class="social-icon" target="_blank"
+                            <a class="social-icon" target="_blank" rel="noopener"
                                 href="https://www.helloasso.com/associations/ass-la-clef/evenements/soiree-blind-test">
                                 <i class="fas fa-ticket fa-beat"></i>
                             </a>
@@ -479,7 +545,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-03-01">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/lutins-elsass.png" alt="Les Lutins d'Elsass">
+                                <img loading="lazy" src="images/concerts/lutins-elsass.png" alt="Les Lutins d'Elsass">
                             </div>
                             <p><strong>Les Lutins d'Elsass, Guebwiller</strong></p>
                             <p>Samedi 1 mars 2025 à 18h</p>
@@ -490,7 +556,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-01-29">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/lutterbach.png" alt="Lutterbach">
+                                <img loading="lazy" src="images/concerts/lutterbach.png" alt="Lutterbach">
                             </div>
                             <p><strong>Salle des Brasseurs, Lutterbach</strong></p>
                             <p>Mercredi 29 janvier 2025 à 20h</p>
@@ -501,7 +567,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-01-24">
                         <div class="thumbnail">
                             <div class="is-passed">
-                                <img src="images/concerts/ferrette.png" alt="Nuit de la Lecture">
+                                <img loading="lazy" src="images/concerts/ferrette.png" alt="Nuit de la Lecture">
                             </div>
                             <p><strong>Nuit de la Lecture, Ferrette</strong></p>
                             <p>Vendredi 24 janvier 2025 à 20h30</p>
@@ -529,7 +595,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-12-01">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/rosenau.png" alt="Rosenau">
+                                                <img loading="lazy" src="images/concerts/rosenau.png" alt="Rosenau">
                                             </div>
                                             <p><strong>Médiathèque du Rhin, Rosenau</strong></p>
                                             <p>Dimanche 1er décembre 2024 à 15h</p>
@@ -540,7 +606,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-11-24">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/cloche_vrille.png" alt="Amis du Clocher">
+                                                <img loading="lazy" src="images/concerts/cloche_vrille.png" alt="Amis du Clocher">
                                             </div>
                                             <p><strong>Le Clocher Vrillé en Musique, Niedermorschwihr</strong></p>
                                             <p>Dimanche 24 novembre 2024 à 17h</p>
@@ -551,7 +617,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-10-11">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/hoplawards.png" alt="Hopl'Awards">
+                                                <img loading="lazy" src="images/concerts/hoplawards.png" alt="Hopl'Awards">
                                             </div>
                                             <p><strong>Hopl'Awards 2024, Strasbourg <img class="flag"
                                                         src="images/flag-bas-rhin.svg" class="flag-icon-large"                                                        alt="Bas-Rhin"></strong></p>
@@ -564,7 +630,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-09-06">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/marche_du_terroir.png"
+                                                <img loading="lazy" src="images/concerts/marche_du_terroir.png"
                                                     alt="Marché du Terroir">
                                             </div>
                                             <p><strong>Marché du Terroir, Schweighouse-Thann</strong></p>
@@ -578,7 +644,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-06-29">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/triforce.png" alt="Triforce">
+                                                <img loading="lazy" src="images/concerts/triforce.png" alt="Triforce">
                                             </div>
                                             <p><strong>Espace Jean Dame, Paris 2e Arr. <img class="flag"
                                                         src="images/flag-paris.svg" class="flag-icon-large" width="30"
@@ -586,14 +652,14 @@
                                             <p>Samedi 29 juin 2024 à 19h30</p>
                                             <p><span>Concert de la Triforce<br>avec The Q-Team et les Negitachi</span>
                                             </p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/4qHyZDbiW"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/4qHyZDbiW"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-05-24">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/sierentz.png" alt="Sierentz">
+                                                <img loading="lazy" src="images/concerts/sierentz.png" alt="Sierentz">
                                             </div>
                                             <p><strong>La Citadelle, Sierentz</strong></p>
                                             <p>Vendredi 24 mai 2024 à 20h</p>
@@ -604,46 +670,46 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-04-14">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/huningue.png" alt="Huningue">
+                                                <img loading="lazy" src="images/concerts/huningue.png" alt="Huningue">
                                             </div>
                                             <p><strong>Le Triangle, Huningue</strong></p>
                                             <p>Dimanche 14 avril 2024 à 11h15</p>
                                             <p><span>Concert dans le cadre des Musiqu'Apéro<br>suivi d'un moment de
                                                     convivialité</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/3I4RTDO7w"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/3I4RTDO7w"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-04-06">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/nolan.png" alt="Nolan, un rayon de soleil">
+                                                <img loading="lazy" src="images/concerts/nolan.png" alt="Nolan, un rayon de soleil">
                                             </div>
                                             <p><strong>Salle Polyvalente, Retzwiller</strong></p>
                                             <p>Samedi 6 avril 2024 à 20h30</p>
                                             <p><span>Concert caritatif pour l'association "Nolan, un rayon<br>de soleil"
                                                     avec la chorale Turbulence</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/7ZWvoITbp"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/7ZWvoITbp"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2024-03-23">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/encrage.png" alt="Encrage">
+                                                <img loading="lazy" src="images/concerts/encrage.png" alt="Encrage">
                                             </div>
                                             <p><strong>Librairie Encrage, Saint-Louis</strong></p>
                                             <p>Samedi 23 mars 2024 à 10h30</p>
                                             <p><span>Concert-Blindtest à la Librairie Encrage<br>de Saint-Louis</span>
                                             </p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/3xkcERIZ0"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/3xkcERIZ0"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/festival_pop_fiction.png"
+                                                <img loading="lazy" src="images/concerts/festival_pop_fiction.png"
                                                     alt="Festival Pop Fiction">
                                             </div>
                                             <p><strong>Festival Pop Fiction, Erstein <img class="flag"
@@ -652,28 +718,28 @@
                                             <p>Dimanche 1er octobre 2023 de 11h à 15h</p>
                                             <p><span>Les Pop'Cornala deviennent pour la<br>première fois les
                                                     Pop'Cornele</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/3D0zPLxsH"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/3D0zPLxsH"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/ete_buissonnier.png" alt="L'été buissonnier">
+                                                <img loading="lazy" src="images/concerts/ete_buissonnier.png" alt="L'été buissonnier">
                                             </div>
                                             <p><strong>L'été buissonnier, Schweighouse-Thann</strong></p>
                                             <p>Samedi 31 août 2023 à 19h30</p>
                                             <p><span>Nous somme de retour à Schweighouse-Thann pour<br>le festival
                                                     "l'été
                                                     buissonnier"</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/R84ZPWZP"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/R84ZPWZP"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/stimmen.png" alt="Lörrach singt">
+                                                <img loading="lazy" src="images/concerts/stimmen.png" alt="Lörrach singt">
                                             </div>
                                             <p><strong>Festival Lörrach singt / Stimmen, Lörrach <img class="flag"
                                                         src="images/flag-germany.svg" class="flag-icon-large" width="30"
@@ -688,35 +754,35 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/air_de_tango.png" alt="Sur un air de Tango">
+                                                <img loading="lazy" src="images/concerts/air_de_tango.png" alt="Sur un air de Tango">
                                             </div>
                                             <p><strong>Foyer de la culture, Dannemarie</strong></p>
                                             <p>Dimanche 11 juin 2023 à 17h</p>
                                             <p><span>En deuxième partie du concert Sur un Air de Tango<br> des Harmonies
                                                     de Reiningue et
                                                     Dannemarie</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/OXlhJGwn"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/OXlhJGwn"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/air_de_tango.png" alt="Sur un air de Tango">
+                                                <img loading="lazy" src="images/concerts/air_de_tango.png" alt="Sur un air de Tango">
                                             </div>
                                             <p><strong>Foyer communal, Reiningue</strong></p>
                                             <p>Samedi 10 juin 2023 à 20h30</p>
                                             <p><span>En deuxième partie du concert Sur un Air de Tango<br> des Harmonies
                                                     de Reiningue et
                                                     Dannemarie</span></p>
-                                            <a class="social-icon" target="_blank" href="https://fb.me/e/1fT52HRyI"><i
+                                            <a class="social-icon" target="_blank" rel="noopener" href="https://fb.me/e/1fT52HRyI"><i
                                                     class="fab fa-facebook fa-beat"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/marche_du_terroir.png"
+                                                <img loading="lazy" src="images/concerts/marche_du_terroir.png"
                                                     alt="Marché du terroir">
                                             </div>
                                             <p><strong>Marché du Terroir, Schweighouse-Thann</strong></p>
@@ -730,7 +796,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/chez_andre.png" alt="Chez André">
+                                                <img loading="lazy" src="images/concerts/chez_andre.png" alt="Chez André">
                                             </div>
                                             <p><strong>Restaurant Chez André, Mulhouse</strong></p>
                                             <p>Samedi 8 avril 2023 à 20h30</p>
@@ -742,7 +808,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/encrage.png" alt="Encrage">
+                                                <img loading="lazy" src="images/concerts/encrage.png" alt="Encrage">
                                             </div>
                                             <p><strong>Librairie Encrage, Saint-Louis</strong></p>
                                             <p>Samedi 4 mars 2023 à 11h</p>
@@ -754,7 +820,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                                         <div class="thumbnail">
                                             <div class="is-passed">
-                                                <img src="images/concerts/halle_au_ble.png" alt="Halle au blé">
+                                                <img loading="lazy" src="images/concerts/halle_au_ble.png" alt="Halle au blé">
                                             </div>
                                             <p><strong>Halle au blé, Altkirch</strong></p>
                                             <p>Vendredi 30 septtembre 2022 à 20h30</p>
@@ -785,7 +851,7 @@
                     <iframe width="560" height="315"
                         src="https://www.youtube.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
                         title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen class="video-embed"></iframe>
                 </div>
             </div>
@@ -802,7 +868,7 @@
                 <h1 class="fade-in-up">On en parle dans la presse</h1>
                 <div class="card-modern fade-in-up">
                 <figure class="figure pop">
-                    <img src="images/presse/halle_au_ble_2022.png" alt="En concert" width="400" height="400"
+                    <img loading="lazy" src="images/presse/halle_au_ble_2022.png" alt="En concert" width="400" height="400"
                         class="figure-img img-fluid rounded presse">
                     <figcaption class="figure-caption">Halle au blé 2022, devant 330 personnes pour notre premier
                         concert.</figcaption>
@@ -872,7 +938,7 @@
             <div class="row">
                 <div class="col">
                     Remerciements à :<br>
-                    <a href="https://www.huningue.fr/" target="_blank"><img src="images/logo_huningue.jpg"
+                    <a href="https://www.huningue.fr/" target="_blank" rel="noopener"><img src="images/logo_huningue.jpg"
                             alt="Ville de Huningue" class="logo sponsor-logo"></a>
                 </div>
             </div>
@@ -880,29 +946,21 @@
                 <div class="col">
                     <!-- Copyright text with proper alignment -->
                     <p class="copyright-text">
-                        Copyright &copy; 2025 Pop'Cornala - <a href="#" data-toggle="modal"
-                            data-target="#legalModal">Mentions Légales</a> - Réalisation : Vincent Le Ligeour
+                        Copyright &copy; 2025 Pop'Cornala - <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#legalModal">Mentions Légales</a> - Réalisation : Vincent Le Ligeour
                     </p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap and jQuery Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <!-- Legal Notice Modal -->
-    <div class="modal fade" id="legalModal" tabindex="-1" role="dialog" aria-labelledby="legalModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="legalModalLabel">Mentions Légales</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <h2>Mentions Légales</h2>
@@ -968,14 +1026,14 @@
                         Toute modification sera publiée sur ce site web.
                     </p>
 
-                    <p>Dernière mise à jour : 2023</p>
+                    <p>Dernière mise à jour : 2025</p>
 
                     <p>Pour toute question concernant nos mentions légales, veuillez nous contacter.</p>
 
-                    <p>Date de publication : 2023</p>
+                    <p>Date de publication : 2025</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
@@ -992,13 +1050,26 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <!-- jQuery (latest version) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS (latest version) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     <script>
         $(function () {
-            $("[data-bs-toggle='tooltip']").tooltip();
+            // Initialize Bootstrap 5 tooltips (check if bootstrap is loaded)
+            if (typeof bootstrap !== 'undefined') {
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+            } else {
+                console.error('Bootstrap is not loaded');
+            }
 
             // Modern Navigation Features
             $('a.nav-link[href^="#"]').on('click', function(e) {
