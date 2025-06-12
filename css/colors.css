@@ -10,6 +10,11 @@
     --color-blue-cinema: rgb(41, 131, 190);
     --color-pink-bubble: rgb(234, 86, 120);
 
+    /* === Common Background Variables === */
+    --bg-card-translucent: rgba(255, 255, 255, 0.95);
+    --bg-navbar: rgba(255, 248, 219, 0.98);
+    --bg-navbar-scrolled: rgba(255, 248, 219, 1);
+
     /* === Legacy Base Colors === */
     --color-pink: 255, 102, 196;
     --color-yellow: 255, 242, 0;

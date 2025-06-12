@@ -116,14 +116,30 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <!-- Center menu -->
                 <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#presentation">A Propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#membres">Membres</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#concerts">Concerts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#videos">Vidéos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#presse">Presse</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#accueil" aria-label="Aller à la section Accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presentation" aria-label="Aller à la section À Propos">A Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#membres" aria-label="Aller à la section Membres">Membres</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#concerts" aria-label="Aller à la section Concerts">Concerts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos" aria-label="Aller à la section Vidéos">Vidéos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#presse" aria-label="Aller à la section Presse">Presse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Aller à la section Contact">Contact</a></li>
                 </ul>
+
+                <!-- Mobile Social Links (shown only on mobile) -->
+                <div class="d-lg-none mobile-social-container">
+                    <hr class="social-divider">
+                    <span class="small text-center d-block mb-2">Nos réseaux sociaux</span>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.facebook.com/popcornala" aria-label="Suivre Pop'Cornala sur Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/popcornalamusique/" aria-label="Suivre Pop'Cornala sur Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.youtube.com/@popcornala" aria-label="Suivre Pop'Cornala sur YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.tiktok.com/@popcornala" aria-label="Suivre Pop'Cornala sur TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
 
             <!-- Right: Social links (only on desktop) -->
@@ -131,13 +147,13 @@
                 <div class="social-links-container">
                     <span class="small">Nos réseaux sociaux</span>
                     <div class="d-flex gap-2">
-                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.facebook.com/popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.facebook.com/popcornala" aria-label="Suivre Pop'Cornala sur Facebook"><i
                                 class="fab fa-facebook"></i></a>
-                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/popcornalamusique/"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.instagram.com/popcornalamusique/" aria-label="Suivre Pop'Cornala sur Instagram"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.youtube.com/@popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.youtube.com/@popcornala" aria-label="Suivre Pop'Cornala sur YouTube"><i
                                 class="fab fa-youtube"></i></a>
-                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.tiktok.com/@popcornala"><i
+                        <a class="social-icon" target="_blank" rel="noopener" href="https://www.tiktok.com/@popcornala" aria-label="Suivre Pop'Cornala sur TikTok"><i
                                 class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -159,8 +175,8 @@
                         pop-culture
                     </div>
                     <div class="hero-cta-container">
-                        <a href="#presentation" class="btn btn-primary btn-lg pulse hero-cta-button">Découvrir le groupe</a>
-                        <a href="#concerts" class="btn btn-outline-primary btn-lg hero-cta-button">Nos concerts</a>
+                        <a href="#presentation" class="btn btn-primary btn-lg pulse hero-cta-button" aria-label="Découvrir le groupe Pop'Cornala - aller à la section À Propos">Découvrir le groupe</a>
+                        <a href="#concerts" class="btn btn-outline-primary btn-lg hero-cta-button" aria-label="Voir nos concerts - aller à la section Concerts">Nos concerts</a>
                     </div>
                 </div>
             </div>
@@ -170,9 +186,9 @@
             <div class="container">
                 <h1 class="fade-in-up">À Propos</h1>
                 <div class="card-modern fade-in-up">
-                <figure class="figure pop">
-                    <img loading="lazy" src="images/photo1.png" alt="En concert" class="figure-image apropos">
-                    <figcaption class="figure-caption">Durant notre premier concert à la Halle au Blé d'Altkirch (Photo
+                <figure class="figure pop" role="img" aria-labelledby="photo1-caption">
+                    <img loading="lazy" src="images/photo1.png" alt="Pop'Cornala en concert sur scène à la Halle au Blé d'Altkirch" class="figure-image apropos">
+                    <figcaption class="figure-caption" id="photo1-caption">Durant notre premier concert à la Halle au Blé d'Altkirch (Photo
                         de Fabrice Chevroton).
                     </figcaption>
                 </figure>
@@ -217,31 +233,31 @@
             <div class="container">
                 <h1 class="fade-in-up">Membres</h1>
                 <p class="fade-in-up section-intro">Découvrez les talents qui composent Pop'Cornala, chacun avec sa personnalité unique et ses passions pop-culture !</p>
-                <div class="row mt-5 justify-content-center fade-in-up">
-                    <div class="member-card">
-                        <div class="box box-force-rose"> <img loading="lazy" src="images/singers/elizabeth.png" alt="Elizabeth">
-                            <h3 class="title">Elizabeth</h3>
-                            <h4 class="singer-subtitle">Alto dans le déni profond</h4>
-                            <ul class="icon">
-                                <li><i class="fa fa-film" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Arcane"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-film"></i></li>
-                                <li><i class="fa fa-tv" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Fullmetal Alchemist"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-anime"></i></li>
-                                <li><i class="fa fa-gamepad" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Ace Attorney"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-game"></i></li>
-                                <li><i class="fa fa-tornado" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                <div class="row mt-5 justify-content-center fade-in-up" role="group" aria-label="Membres du groupe Pop'Cornala">
+                    <article class="member-card" role="group" aria-labelledby="elizabeth-name" aria-describedby="elizabeth-role">
+                        <div class="box box-force-rose"> <img loading="lazy" src="images/singers/elizabeth.png" alt="Photo d'Elizabeth, chanteuse alto de Pop'Cornala">
+                            <h3 class="title" id="elizabeth-name">Elizabeth</h3>
+                            <h4 class="singer-subtitle" id="elizabeth-role">Alto dans le déni profond</h4>
+                            <ul class="icon" role="list" aria-label="Passions et préférences d'Elizabeth">
+                                <li role="listitem"><i class="fa fa-film" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                        data-bs-placement="left" data-bs-title="Film préféré: Arcane"
+                                        data-bs-custom-class="custom-tooltip custom-tooltip-film" aria-label="Film préféré: Arcane"></i></li>
+                                <li role="listitem"><i class="fa fa-tv" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                        data-bs-placement="left" data-bs-title="Série préférée: Fullmetal Alchemist"
+                                        data-bs-custom-class="custom-tooltip custom-tooltip-anime" aria-label="Série préférée: Fullmetal Alchemist"></i></li>
+                                <li role="listitem"><i class="fa fa-gamepad" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                        data-bs-placement="left" data-bs-title="Jeu préféré: Ace Attorney"
+                                        data-bs-custom-class="custom-tooltip custom-tooltip-game" aria-label="Jeu préféré: Ace Attorney"></i></li>
+                                <li role="listitem"><i class="fa fa-tornado" data-bs-toggle="tooltip" data-bs-trigger="hover"
                                         data-bs-placement="left"
-                                        data-bs-title="Être capable de retrouver tous les objets du quotidien que j'égarre sans le moindre effort"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-superpower"></i></li>
-                                <li><i class="fa fa-star" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Oscar François de Jarjayes"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-hero"></i></li>
+                                        data-bs-title="Super-pouvoir souhaité: Être capable de retrouver tous les objets du quotidien que j'égarre sans le moindre effort"
+                                        data-bs-custom-class="custom-tooltip custom-tooltip-superpower" aria-label="Super-pouvoir souhaité: Retrouver les objets égarés"></i></li>
+                                <li role="listitem"><i class="fa fa-star" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                        data-bs-placement="left" data-bs-title="Héros préféré: Oscar François de Jarjayes"
+                                        data-bs-custom-class="custom-tooltip custom-tooltip-hero" aria-label="Héros préféré: Oscar François de Jarjayes"></i></li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <div class="member-card">
                         <div class="box box-force-jaune"> <img loading="lazy" src="images/singers/isabel.png" alt="Isabel">
                             <h3 class="title">Isabel</h3>
@@ -446,7 +462,7 @@
                             <p><span>Des poireaux, du popcorn, du fun<br>avec la chorale parisienne des <a
                                         href="https://www.negitachi.fr" target="_blank" rel="noopener">Negitachi</a></span></p>
                             <a class="social-icon" target="_blank" rel="noopener"
-                                href="https://www.popcornala.fr/acps">
+                                href="https://www.popcornala.fr/acps" aria-label="Réserver des places pour le concert">
                                 <i class="fas fa-ticket fa-beat"></i>
                             </a>
                         </div>
@@ -472,7 +488,7 @@
                             <p>Samedi 17 mai 2025 à 18h30</p>
                             <p><span>Un pop quiz en préchauffe<br>de la finale de l'Eurovision</span></p>
                             <a class="social-icon" target="_blank" rel="noopener"
-                                href="https://www.instagram.com/geekfactory.mulhouse/">
+                                href="https://www.instagram.com/geekfactory.mulhouse/" aria-label="Voir l'événement sur Instagram">
                                 <i class="fab fa-instagram fa-beat"></i>
                             </a>
                             </a>
@@ -847,12 +863,78 @@
             <div class="container text-center">
                 <h1 class="fade-in-up">Vidéos</h1>
                 <p class="fade-in-up section-intro">Plongez dans notre univers musical à travers nos performances en vidéo !</p>
-                <div class="video-container">
+                
+                <!-- Featured Playlist -->
+                <div class="video-container fade-in-up">
                     <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
-                        title="YouTube video player"
+                        src="https://www.youtube-nocookie.com/embed/videoseries?list=PLBsiEIRfL3PG1B5eFwEcOv5ZoSSsvUUSv"
+                        title="Playlist complète Pop'Cornala"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen class="video-embed"></iframe>
+                        allowfullscreen class="video-embed" aria-label="Playlist YouTube de Pop'Cornala"
+                        loading="lazy"></iframe>
+                </div>
+
+                <!-- Individual Videos Grid -->
+                <div class="videos-grid fade-in-up">
+                    <h3 class="videos-section-title">Vidéos populaires</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <iframe width="100%" height="200"
+                                        src="https://www.youtube-nocookie.com/embed/PWPjNxMGbiI"
+                                        title="Pop'Cornala - Down by the River (Baldur's Gate 3)"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen aria-label="Pop'Cornala - Down by the River (Baldur's Gate 3)"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <h4>Baldur's Gate 3</h4>
+                                    <p>Quand le RPG épique rencontre l'harmonie vocale ! Une adaptation qui transporte directement à Faerun avec des voix qui rivalisent avec les sorts les plus puissants.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <iframe width="100%" height="200"
+                                        src="https://www.youtube-nocookie.com/embed/L5fKWNiEMwM"
+                                        title="Pop'Cornala - Fort Boyard (Thème Principal)"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen aria-label="Pop'Cornala - Fort Boyard (Thème Principal)"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <h4>Fort Boyard</h4>
+                                    <p>L'aventure légendaire revisitée ! Ce thème mythique prend une nouvelle dimension avec nos voix, de quoi faire vibrer même le Père Fouras.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <iframe width="100%" height="200"
+                                        src="https://www.youtube-nocookie.com/embed/EOf-jjiYSmk"
+                                        title="Pop'Cornala - James Bond (Main Theme)"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen aria-label="Pop'Cornala - James Bond (Main Theme)"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <h4>James Bond</h4>
+                                    <p>Élégance et mystère à l'état pur ! Notre version a cappella du thème iconique de 007&nbsp;: sophistiquée, puissante et définitivement... explosive.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action -->
+                    <div class="videos-cta">
+                        <a href="https://www.youtube.com/@popcornala" target="_blank" rel="noopener" 
+                           class="btn btn-primary btn-lg" aria-label="Voir toutes nos vidéos sur YouTube">
+                            <i class="fab fa-youtube"></i> Voir toutes nos vidéos
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -893,7 +975,8 @@
                 <p class="fade-in-up section-intro">Une question ? Un projet ? Nous serions ravis d'échanger avec vous !</p>
                 <div class="card-modern fade-in-up">
             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgejklkb"
-                method="post" class="form-horizontal needs-validation" novalidate>
+                method="post" class="form-horizontal needs-validation" novalidate role="form" aria-labelledby="contact-form-title">
+                <h2 id="contact-form-title" class="visually-hidden">Formulaire de contact Pop'Cornala</h2>
                 <fieldset id="fs-frm-inputs">
                     <div class="form-floating mb-3">
                         <input type="text" name="name" id="full-name" placeholder="Nom et prénom" required
@@ -923,8 +1006,9 @@
                     <input type="hidden" name="_subject" id="email-subject"
                         value="Demande de contact sur http://www.popcornala.fr">
                 </fieldset>
-                <button type="submit" class="btn btn-primary full-width-button"><i
-                        class="fa fa-envelope-circle-check fa-beat"></i> Envoyer</button>
+                <button type="submit" class="btn btn-primary full-width-button" aria-describedby="submit-help"><i
+                        class="fa fa-envelope-circle-check fa-beat" aria-hidden="true"></i> Envoyer</button>
+                <div id="submit-help" class="visually-hidden">Cliquez pour envoyer votre message à Pop'Cornala</div>
                 <p>Vous pouvez aussi nous contacter par message privé sur nos réseaux sociaux.</p>
             </form>
                 </div>
@@ -1184,6 +1268,98 @@
                     console.log('concert date passed, changing status');
                     $(this).find('.thumbnail').removeClass('to-come');
                     $(this).find('.thumbnail').addClass('is-passed');
+                }
+            });
+
+            // Generate share buttons for future concerts
+            function generateShareButtons() {
+                var today = new Date().toISOString().slice(0, 10);
+                
+                $('[data-concert-date]').each(function() {
+                    var $concertCard = $(this);
+                    var concertDate = $concertCard.data('concert-date');
+                    var $thumbnail = $concertCard.find('.thumbnail');
+                    var isTocome = $thumbnail.find('.to-come').length > 0;
+                    var isComingSoon = concertDate === '2099-12-31'; // Generic "coming soon" card
+                    
+                    // Only add share button for future concerts (excluding generic "coming soon")
+                    if (isTocome && concertDate > today && !isComingSoon) {
+                        // Extract concert info from thumbnail
+                        var concertTitle = $thumbnail.find('p strong').first().text();
+                        var concertDateText = $thumbnail.find('p').eq(1).text();
+                        
+                        // Wrap thumbnail in container for positioning
+                        if (!$thumbnail.parent().hasClass('concert-card-container')) {
+                            $thumbnail.wrap('<div class="concert-card-container"></div>');
+                        }
+                        
+                        // Create share button HTML
+                        var shareButtonHtml = `
+                            <div class="share-concert" data-concert-title="${concertTitle}" data-concert-date="${concertDateText}">
+                                <button class="share-btn" aria-label="Partager ce concert">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <div class="share-dropdown">
+                                    <a href="#" class="share-option facebook" aria-label="Partager sur Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="share-option copy" aria-label="Copier le lien">
+                                        <i class="fas fa-copy"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                        
+                        // Add share button to card container
+                        $thumbnail.parent().append(shareButtonHtml);
+                    }
+                });
+            }
+
+            // Call function to generate share buttons
+            generateShareButtons();
+
+            // Concert sharing functionality (using event delegation)
+            $(document).on('click', '.share-btn', function(e) {
+                e.preventDefault();
+                var $dropdown = $(this).siblings('.share-dropdown');
+                var $shareContainer = $(this).closest('.share-concert');
+                var concertTitle = $shareContainer.data('concert-title');
+                var concertDate = $shareContainer.data('concert-date');
+                var currentUrl = window.location.href;
+                var shareText = `🎵 ${concertTitle} - ${concertDate} avec Pop'Cornala! Ne manquez pas ce concert a cappella unique!`;
+                
+                // Close other dropdowns
+                $('.share-dropdown').not($dropdown).removeClass('show');
+                
+                // Toggle current dropdown
+                $dropdown.toggleClass('show');
+                
+                // Update share links
+                var facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(shareText)}`;
+                
+                $dropdown.find('.facebook').attr('href', facebookUrl);
+            });
+
+            // Copy to clipboard functionality (using event delegation)
+            $(document).on('click', '.share-option.copy', function(e) {
+                e.preventDefault();
+                var currentUrl = window.location.href;
+                navigator.clipboard.writeText(currentUrl).then(function() {
+                    // Visual feedback
+                    var $copyBtn = $(e.target).closest('.copy');
+                    var originalIcon = $copyBtn.find('i').attr('class');
+                    $copyBtn.find('i').attr('class', 'fas fa-check');
+                    setTimeout(function() {
+                        $copyBtn.find('i').attr('class', originalIcon);
+                    }, 2000);
+                });
+            });
+
+            // Close share dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.share-concert').length) {
+                    $('.share-dropdown').removeClass('show');
                 }
             });
         });

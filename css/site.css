@@ -8,6 +8,19 @@
     box-sizing: border-box;
 }
 
+/* Accessibility helpers */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -181,7 +194,7 @@ p {
    =================================== */
 
 .navbar {
-    background-color: rgba(255, 248, 219, 0.98) !important;
+    background-color: var(--bg-navbar) !important;
     border-bottom: 2px solid var(--color-text-default);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
@@ -191,7 +204,7 @@ p {
 
 .navbar.scrolled {
     padding: 0.5rem 0;
-    background-color: rgba(255, 248, 219, 1) !important;
+    background-color: var(--bg-navbar-scrolled) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -269,6 +282,17 @@ p {
 
     .nav-item {
         text-align: center;
+    }
+
+    .mobile-social-container {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .social-divider {
+        margin: 1rem 0 0.5rem 0;
+        border-color: var(--color-text-default);
+        opacity: 0.3;
     }
 }
 
@@ -453,7 +477,7 @@ section:not(:last-of-type)::after {
    =================================== */
 
 .card-modern {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--bg-card-translucent);
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -569,6 +593,92 @@ section:not(:last-of-type)::after {
     flex-shrink: 0;
 }
 
+/* Concert Share Buttons - Positioned on top of cards */
+.concert-card-container {
+    position: relative;
+}
+
+.share-concert {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.share-btn {
+    background: rgba(234, 86, 120, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn:hover {
+    background: rgba(41, 131, 190, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.share-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    display: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.share-dropdown.show {
+    display: flex;
+    opacity: 1;
+    gap: 0.5rem;
+}
+
+.share-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.share-option.facebook { background: #1877f2; }
+.share-option.copy { background: #6c757d; }
+
+.share-option:hover {
+    transform: scale(1.15);
+    color: white;
+}
+
 /* ===================================
    CONCERTS & EVENTS
    =================================== */
@@ -593,10 +703,6 @@ section:not(:last-of-type)::after {
     margin-bottom: 1.5rem !important;
 }
 
-#concerts .thumbnail .social-icon {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
 
 .concert-card {
     flex: 0 0 auto;
@@ -883,6 +989,79 @@ img.flag {
     border: 0;
 }
 
+/* Video Grid Styles */
+.videos-grid {
+    margin-top: 4rem;
+}
+
+.videos-section-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-blue-cinema);
+}
+
+.video-card {
+    background: var(--bg-card-translucent);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.video-thumbnail iframe {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-info h4 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-pink-bubble);
+}
+
+.video-info p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.videos-cta {
+    margin-top: 3rem;
+}
+
+.videos-cta .btn {
+    gap: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
 /* ===================================
    MODALS
    =================================== */
@@ -972,6 +1151,11 @@ a.social-icon:hover {
     box-shadow: 0 5px 15px rgba(234, 86, 120, 0.3);
 }
 
+/* Social icon specific contexts */
+.thumbnail .social-icon {
+    margin: 0.5rem auto;
+}
+
 ul.social-icon li {
     display: flex;
     flex-direction: column;
@@ -994,12 +1178,6 @@ ul.social-icon li {
     white-space: nowrap;
 }
 
-.thumbnail .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5rem auto;
-}
 
 .fa-disabled {
     font-size: 1.5rem;
