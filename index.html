@@ -1296,14 +1296,14 @@
                         // Create share button HTML
                         var shareButtonHtml = `
                             <div class="share-concert" data-concert-title="${concertTitle}" data-concert-date="${concertDateText}">
-                                <button class="share-btn" aria-label="Partager ce concert">
+                                <button class="share-btn" aria-label="Partager ce concert" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Partager ce concert">
                                     <i class="fas fa-share-alt"></i>
                                 </button>
                                 <div class="share-dropdown">
-                                    <a href="#" class="share-option facebook" aria-label="Partager sur Facebook">
+                                    <a href="#" class="share-option facebook" aria-label="Partager sur Facebook" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Partager sur Facebook">
                                         <i class="fab fa-facebook"></i>
                                     </a>
-                                    <a href="#" class="share-option copy" aria-label="Copier le lien">
+                                    <a href="#" class="share-option copy" aria-label="Copier le lien" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copier le lien du site">
                                         <i class="fas fa-copy"></i>
                                     </a>
                                 </div>
@@ -1319,15 +1319,38 @@
             // Call function to generate share buttons
             generateShareButtons();
 
+            // Initialize tooltips for share buttons after they're generated
+            setTimeout(function() {
+                if (typeof bootstrap !== 'undefined') {
+                    var shareTooltipTriggerList = [].slice.call(document.querySelectorAll('.share-concert [data-bs-toggle="tooltip"]'));
+                    var shareTooltipList = shareTooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl);
+                    });
+                }
+            }, 100);
+
             // Concert sharing functionality (using event delegation)
             $(document).on('click', '.share-btn', function(e) {
                 e.preventDefault();
                 var $dropdown = $(this).siblings('.share-dropdown');
                 var $shareContainer = $(this).closest('.share-concert');
-                var concertTitle = $shareContainer.data('concert-title');
-                var concertDate = $shareContainer.data('concert-date');
+                
+                // Get concert details from the actual card content
+                var $thumbnail = $shareContainer.siblings('.thumbnail');
+                var concertTitle = $thumbnail.find('p strong').first().text();
+                var concertDate = $thumbnail.find('p').eq(1).text();
+                var concertDescription = $thumbnail.find('p span').text();
+                
                 var currentUrl = window.location.href;
-                var shareText = `🎵 ${concertTitle} - ${concertDate} avec Pop'Cornala! Ne manquez pas ce concert a cappella unique!`;
+                
+                // Create customized share message using actual card content
+                var shareText = `🎵 Ne manquez pas Pop'Cornala en concert ! 🍿\n\n📍 ${concertTitle}\n📅 ${concertDate}`;
+                
+                if (concertDescription && concertDescription.trim() !== '') {
+                    shareText += `\n\n${concertDescription}`;
+                }
+                
+                shareText += '\n\n#PopCornala #ACappella #PopCulture #Concert';
                 
                 // Close other dropdowns
                 $('.share-dropdown').not($dropdown).removeClass('show');
@@ -1335,24 +1358,62 @@
                 // Toggle current dropdown
                 $dropdown.toggleClass('show');
                 
-                // Update share links
-                var facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(shareText)}`;
+                // Update share links - use canonical URL for Facebook sharing
+                var canonicalUrl = 'https://www.popcornala.fr/';
+                var shareUrl = currentUrl.includes('localhost') || currentUrl.includes('file://') ? canonicalUrl : currentUrl;
                 
-                $dropdown.find('.facebook').attr('href', facebookUrl);
+                // Use Facebook share with hashtags parameter
+                var facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&hashtag=${encodeURIComponent('#PopCornala')}`;
+                
+                console.log('Facebook share URL:', facebookUrl); // Debug log
+                
+                $dropdown.find('.facebook').attr('href', facebookUrl).attr('target', '_blank').attr('rel', 'noopener');
+            });
+
+            // Direct Facebook share click handler (using event delegation)
+            $(document).on('click', '.share-option.facebook', function(e) {
+                e.preventDefault();
+                var shareUrl = $(this).attr('href');
+                
+                // Open Facebook share dialog
+                if (shareUrl && shareUrl !== '#') {
+                    window.open(shareUrl, 'facebook-share', 'width=580,height=400');
+                }
             });
 
             // Copy to clipboard functionality (using event delegation)
             $(document).on('click', '.share-option.copy', function(e) {
                 e.preventDefault();
                 var currentUrl = window.location.href;
+                var $copyBtn = $(e.target).closest('.copy');
+                
                 navigator.clipboard.writeText(currentUrl).then(function() {
                     // Visual feedback
-                    var $copyBtn = $(e.target).closest('.copy');
                     var originalIcon = $copyBtn.find('i').attr('class');
+                    var originalTooltip = $copyBtn.attr('data-bs-title');
+                    
+                    // Change icon and tooltip
                     $copyBtn.find('i').attr('class', 'fas fa-check');
+                    $copyBtn.attr('data-bs-title', 'Lien copié !');
+                    
+                    // Update tooltip if it exists
+                    var tooltip = bootstrap.Tooltip.getInstance($copyBtn[0]);
+                    if (tooltip) {
+                        tooltip.setContent({ '.tooltip-inner': 'Lien copié !' });
+                    }
+                    
+                    // Reset after 2 seconds
                     setTimeout(function() {
                         $copyBtn.find('i').attr('class', originalIcon);
+                        $copyBtn.attr('data-bs-title', originalTooltip);
+                        
+                        // Reset tooltip
+                        if (tooltip) {
+                            tooltip.setContent({ '.tooltip-inner': originalTooltip });
+                        }
                     }, 2000);
+                }).catch(function(err) {
+                    console.error('Could not copy text: ', err);
                 });
             });
 
