@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>A Cappella Pop Show - Pop'Cornala & Negitachi - 4-5 Octobre 2025</title>
+    <meta name="description" content="Rejoignez-nous pour l'A Cappella Pop Show ! Pop'Cornala (Huningue) et les Negitachi (Paris) vous donnent rendez-vous les 4 et 5 octobre 2025 à l'Église de Garnison pour un weekend musical exceptionnel !">
+    <meta name="keywords" content="ACPS, A Cappella Pop Show, Pop'Cornala, Negitachi, concert a cappella, octobre 2025, Huningue, Église de Garnison">
+    <meta name="author" content="Pop'Cornala">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="event">
+    <meta property="og:url" content="https://www.popcornala.fr/acps">
+    <meta property="og:title" content="A Cappella Pop Show - Pop'Cornala & Negitachi - 4-5 Octobre 2025">
+    <meta property="og:description" content="Des poireaux, du popcorn, du fun ! Deux ensembles vocaux a cappella pour un weekend musical inoubliable.">
+    <meta property="og:image" content="https://www.popcornala.fr/acps-landing/Affiche-logos-RGB.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.popcornala.fr/acps">
+    <meta property="twitter:title" content="A Cappella Pop Show - Pop'Cornala & Negitachi">
+    <meta property="twitter:description" content="4-5 octobre 2025 - Un weekend musical exceptionnel à Huningue !">
+    <meta property="twitter:image" content="https://www.popcornala.fr/acps-landing/Affiche-logos-RGB.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&family=Inter:wght@300..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variables de couleurs Pop'Cornala */
+        :root {
+            --color-background: rgb(255, 248, 219);
+            --color-text-default: rgb(23, 55, 102);
+            --color-yellow-popcorn: rgb(254, 201, 12);
+            --color-blue-cinema: rgb(41, 131, 190);
+            --color-pink-bubble: rgb(234, 86, 120);
+            --bg-card-translucent: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-default);
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 248, 219, 0.98) !important;
+            border-bottom: 2px solid var(--color-text-default);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: fixed !important;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            color: var(--color-text-default) !important;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            color: var(--color-pink-bubble) !important;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, 
+                rgba(41, 131, 190, 0.1), 
+                rgba(234, 86, 120, 0.1),
+                rgba(254, 201, 12, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '🍿';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: '🎵';
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            font-size: 2.5rem;
+            opacity: 0.3;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-title {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            color: var(--color-blue-cinema);
+            text-shadow: 3px 3px 0px var(--color-yellow-popcorn);
+            margin-bottom: 1rem;
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            color: var(--color-pink-bubble);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-date {
+            background: linear-gradient(135deg, var(--color-yellow-popcorn), rgba(254, 201, 12, 0.8));
+            color: var(--color-text-default);
+            font-family: 'Bangers', cursive;
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0 2rem;
+            box-shadow: 0 10px 30px rgba(254, 201, 12, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Affiche Section */
+        .poster-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .poster-img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive pour mobile */
+        @media (max-width: 768px) {
+            .poster-img {
+                max-width: 85%;
+            }
+        }
+
+        .poster-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Info Cards */
+        .info-section {
+            padding: 4rem 2rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(41, 131, 190, 0.3), 
+                rgba(234, 86, 120, 0.3), 
+                rgba(254, 201, 12, 0.3));
+            border-radius: 25px;
+            z-index: -1;
+            margin: -2px;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--color-blue-cinema);
+            margin-bottom: 1rem;
+            text-align: center !important;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Programme Section */
+        .program-section {
+            background: linear-gradient(135deg, 
+                rgba(234, 86, 120, 0.03),
+                rgba(41, 131, 190, 0.03));
+            padding: 4rem 2rem;
+            margin: 2rem auto;
+            border-radius: 30px;
+            text-align: center !important;
+        }
+
+        .program-section h2,
+        .program-section p,
+        .program-section div {
+            text-align: center !important;
+        }
+
+        /* Exception pour les listes d'accès dans les autres sections */
+        .info-section ul {
+            text-align: left !important;
+        }
+
+        .coming-soon {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(2rem, 6vw, 4rem);
+            color: var(--color-pink-bubble);
+            text-align: center;
+            margin: 2rem 0;
+            text-shadow: 2px 2px 0px var(--color-yellow-popcorn);
+            animation: wiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-5deg); }
+            20% { transform: rotateZ(5deg); }
+            25% { transform: rotateZ(-5deg); }
+            30% { transform: rotateZ(5deg); }
+            35% { transform: rotateZ(-2deg); }
+            40%, 100% { transform: rotateZ(0); }
+        }
+
+        /* Social Links */
+        .social-section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            color: var(--color-text-default);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--color-blue-cinema), var(--color-pink-bubble));
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .social-link:hover::before {
+            background: linear-gradient(45deg, var(--color-pink-bubble), var(--color-yellow-popcorn));
+        }
+
+        /* CTA Buttons */
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--color-blue-cinema), var(--color-pink-bubble));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Fredoka', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(41, 131, 190, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(41, 131, 190, 0.4);
+            color: white;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--color-text-default), rgba(23, 55, 102, 0.9));
+            color: var(--color-background);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 15px 40px;
+            }
+            
+            .poster-section,
+            .info-section {
+                padding: 2rem 1rem;
+                margin: 1rem;
+            }
+
+            .info-card {
+                padding: 1.5rem;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Animations supplémentaires */
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Background decoratif */
+        .decorative-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.02;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle at 20% 50%, var(--color-blue-cinema) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--color-pink-bubble) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, var(--color-yellow-popcorn) 0%, transparent 50%);
+        }
+
+        /* Programme Lists */
+        .program-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .program-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(23, 55, 102, 0.1);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .program-list li:last-child {
+            border-bottom: none;
+        }
+
+        .program-list strong {
+            color: var(--color-text-default);
+            font-weight: 600;
+        }
+
+        /* Amélioration de l'espacement des cartes */
+        .h-100 {
+            height: 100% !important;
+        }
+
+        /* Hero Social */
+        .hero-social .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-social .social-link {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-social .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px) scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background décoratif -->
+    <div class="decorative-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-arrow-left me-2"></i> Pop'Cornala
+            </a>
+            <div class="ms-auto">
+                <span class="navbar-text fw-bold">ACPS 2025</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">A CAPPELLA POP SHOW</h1>
+            <p class="hero-subtitle">
+                Les Pop'Cornala rencontrent les Negitachi<br>
+                pour un weekend musical exceptionnel !
+            </p>
+            <div class="hero-date">
+                4 & 5 OCTOBRE 2025
+            </div>
+            <p class="lead">
+                <strong>📍 Église de Garnison - Huningue</strong><br>
+                <em>Des poireaux, du popcorn, du fun !</em>
+            </p>
+            
+            <!-- CTA Réservation Visible -->
+            <div class="hero-cta-container">
+                <a href="https://www.helloasso.com/associations/pop-cornala/evenements/a-cappella-pop-show" 
+                   class="cta-button pulse" target="_blank" rel="noopener">
+                    <i class="fas fa-ticket me-2"></i> Réserver mes places - 5€
+                </a>
+                <div style="margin-top: 0.8rem;">
+                    <small style="color: var(--color-text-default); background: rgba(255,255,255,0.95); padding: 0.3rem 0.8rem; border-radius: 10px; display: inline-block;">
+                        Places limitées • Réservation sécurisée
+                    </small>
+                </div>
+            </div>
+
+            <!-- Réseaux Sociaux Hero -->
+            <div class="hero-social mt-4">
+                <p style="color: var(--color-text-default); background: rgba(255,255,255,0.9); padding: 0.5rem 1rem; border-radius: 15px; display: inline-block; margin-bottom: 1rem;">
+                    <strong>Suivez l'événement :</strong>
+                </p>
+                <div class="social-links mb-3">
+                    <a href="https://www.facebook.com/popcornala" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/popcornalamusique/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@popcornala" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@popcornala" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+                <p style="color: var(--color-text-default); background: rgba(255,255,255,0.9); padding: 0.5rem 1rem; border-radius: 15px; display: inline-block; font-size: 0.9rem;">
+                    <strong>#ACappellaPopShow #PopCornala #Negitachi #ACPS2025</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Affiche -->
+    <section class="container poster-section">
+        <h2 class="card-title">L'Affiche Officielle</h2>
+        <img src="Affiche-logos-RGB.png" alt="Affiche A Cappella Pop Show 2025" class="poster-img">
+        <p class="mt-3 text-muted">
+            <small><em>Affiche créée par Elizabeth RACARY (Pop'Cornala)<br>
+            Saurez-vous retrouver toutes les références pop-culture cachées ? 🕵️</em></small>
+        </p>
+    </section>
+
+    <!-- Section Informations -->
+    <section class="container info-section">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="info-card fade-in-scroll">
+                    <h3 class="card-title">🍿 Les Pop'Cornala</h3>
+                    <p class="card-text">
+                        <strong>Huningue, Alsace</strong><br>
+                        Les Petits Pop Corn reviennent avec leur énergie communicative ! 
+                        Ensemble vocal a cappella de 7 membres, ils transforment vos références 
+                        pop-culture en harmonies vocales surprenantes.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="info-card fade-in-scroll">
+                    <h3 class="card-title">🥬 Les Negitachi</h3>
+                    <p class="card-text">
+                        <strong>Paris</strong><br>
+                        La chorale parisienne qui fait vibrer la capitale ! 
+                        Spécialistes des génériques d'anime et de la culture japonaise,
+                        ils apportent leur touche unique à l'univers a cappella.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card fade-in-scroll">
+            <h3 class="card-title">📅 Informations Pratiques</h3>
+            <div class="row">
+                <div class="col-md-4 text-center mb-3">
+                    <h4 style="color: var(--color-blue-cinema);">📍 Lieu</h4>
+                    <p><strong>Église de Garnison</strong><br>Huningue</p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <h4 style="color: var(--color-pink-bubble);">🕐 Horaires</h4>
+                    <p><strong>Samedi 4 octobre :</strong> 20h<br>
+                    <strong>Dimanche 5 octobre :</strong> 10h</p>
+                    <p><small><em>Durée : 2h (entracte compris)</em></small></p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <h4 style="color: var(--color-yellow-popcorn);">🎫 Tarif</h4>
+                    <p><strong>5€</strong><br>Entrée unique</p>
+                    <p><small>Plateau à la sortie<br>+ Buvette & Goodies</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Programme -->
+    <section class="container program-section fade-in-scroll text-center">
+        <h2 class="card-title">📜 Programme Musical</h2>
+        
+        <div class="coming-soon">
+            PROGRAMME COMPLET<br>
+            RÉVÉLÉ LE JOUR J !
+        </div>
+        
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8">
+                <div class="info-card">
+                    <p class="fs-5 mb-4">
+                        <strong>🎵 Au programme :</strong><br>
+                        Un voyage musical épique à travers les univers qui nous passionnent !
+                    </p>
+                    
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3 mb-3">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎮</div>
+                            <h5 style="color: var(--color-pink-bubble); font-size: 1rem;">Jeux Vidéo</h5>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎬</div>
+                            <h5 style="color: var(--color-pink-bubble); font-size: 1rem;">Films & Séries</h5>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎌</div>
+                            <h5 style="color: var(--color-pink-bubble); font-size: 1rem;">Anime & Manga</h5>
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌐</div>
+                            <h5 style="color: var(--color-pink-bubble); font-size: 1rem;">Mèmes Internet</h5>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center fs-6 text-muted mb-4">
+                        Des classiques intemporels aux dernières pépites, 
+                        des références cultes aux surprises inattendues...
+                    </p>
+                    
+                    <div class="mystery-hint p-3" style="background: rgba(254, 201, 12, 0.1); border-radius: 15px; border-left: 4px solid var(--color-yellow-popcorn);">
+                        <p class="mb-0">
+                            <strong>🕵️ Mystère & Suspense :</strong><br>
+                            <em>Gardez vos oreilles et vos yeux bien ouverts... 
+                            la surprise fait partie du spectacle ! Serez-vous prêts pour ce voyage musical unique ? 🎭</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Téléchargements -->
+        <div class="text-center">
+            <h3 class="mb-3" style="color: var(--color-text-default);">📄 Pour en savoir plus</h3>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="Dossier%20de%20presse%20ACPS.pdf" class="cta-button" target="_blank" style="font-size: 1rem; padding: 0.7rem 1.5rem;">
+                    <i class="fas fa-newspaper me-2"></i> Dossier de Presse
+                </a>
+                <button class="cta-button" data-bs-toggle="modal" data-bs-target="#programModal" style="font-size: 1rem; padding: 0.7rem 1.5rem; border: none;">
+                    <i class="fas fa-music me-2"></i> Programme Complet
+                </button>
+            </div>
+            <p class="mt-2 small text-muted">
+                <em>Le programme détaillé sera distribué lors du spectacle 🎪</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Informations Complémentaires -->
+    <section class="container info-section fade-in-scroll">
+        <div class="info-card">
+            <h3 class="card-title">🎭 Un Projet Exceptionnel</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 style="color: var(--color-blue-cinema);">🤝 La Rencontre</h4>
+                    <p>
+                        Ce spectacle joyeux et fédérateur marque la rencontre entre deux ensembles vocaux aux univers complémentaires. 
+                        Né d'une première invitation des Negitachi en juin 2024 pour un concert parisien exceptionnel, 
+                        ce projet concrétise l'envie mutuelle de créer ensemble.
+                    </p>
+                    <p>
+                        <strong>⚠️ Événement unique :</strong> Le spectacle ne sera donné qu'à ces deux occasions !
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <h4 style="color: var(--color-pink-bubble);">🏛️ Le Lieu</h4>
+                    <p>
+                        <strong>Église de Garnison</strong><br>
+                        <small>Place Abbatucci - 23 rue Barbanègre<br>68330 Huningue</small>
+                    </p>
+                    <p>
+                        Cette église désacralisée, symbole de la région des Trois Frontières, offre une acoustique exceptionnelle 
+                        pour ce mariage inédit entre pop-culture et patrimoine historique.
+                    </p>
+                    <h5 style="color: var(--color-text-default);">🚗 Accès</h5>
+                    <ul style="font-size: 0.9rem; text-align: left; list-style: none; padding-left: 0;">
+                        <li><strong>🚗 Parking :</strong> Place Abbatucci & Place de l'Ancien Hôtel de Ville</li>
+                        <li><strong>🚲 Vélos :</strong> Arceaux disponibles Place Abbatucci</li>
+                        <li><strong>🚌 Bus :</strong> Distribus (arrêt Place Abbatucci - lignes 603, 1, 111)</li>
+                        <li><strong>🚋 Tram :</strong> Weil Am Rhein Dreiländerbr. 8 (côté allemand)</li>
+                        <li><strong>♿ Accessibilité :</strong> Salle accessible PMR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section Partenaires -->
+    <section class="container info-section fade-in-scroll">
+        <div class="info-card text-center">
+            <h3 class="card-title">🤝 Nos Partenaires</h3>
+            <p class="mb-4">Merci à ceux qui rendent ce projet possible :</p>
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3">
+                    <div style="background: white; padding: 1rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: #173766; margin-bottom: 0.5rem;">🏛️ Ville de Huningue</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Mise à disposition de la salle<br>& soutien financier</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div style="background: white; padding: 1rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: #e30613; margin-bottom: 0.5rem;">🏦 Crédit Mutuel</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Partenaire financier<br>du projet</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div style="background: white; padding: 1rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: var(--color-blue-cinema); margin-bottom: 0.5rem;">🎵 Association Turbulence</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Soutien artistique<br>et logistique</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="container info-section fade-in-scroll">
+        <div class="info-card text-center">
+            <h3 class="card-title">📞 Contact & Informations</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-3">
+                    <h5 style="color: var(--color-blue-cinema);">📧 Contact</h5>
+                    <p><strong>Association Pop'Cornala</strong><br>
+                    <a href="mailto:contact@popcornala.fr" style="color: var(--color-pink-bubble); text-decoration: none;">
+                        <i class="fas fa-envelope me-2"></i>contact@popcornala.fr
+                    </a></p>
+                </div>
+            </div>
+            <p class="mt-3">
+                <small>
+                    <strong>💡 Le saviez-vous ?</strong><br>
+                    L'affiche de cet événement a été entièrement conçue par Elizabeth RACARY, 
+                    talentueuse chanteuse des Pop'Cornala ! Elle dissimule subtilement de nombreuses références de pop-culture... 
+                    saurez-vous toutes les retrouver ? 🕵️
+                </small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Modal Programme -->
+    <div class="modal fade" id="programModal" tabindex="-1" aria-labelledby="programModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border-radius: 20px; border: none; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);">
+                <div class="modal-header" style="border: none; padding: 2rem 2rem 1rem;">
+                    <h5 class="modal-title" id="programModalLabel" style="font-family: 'Bangers', cursive; font-size: 2rem; color: var(--color-blue-cinema);">
+                        🎭 Pourquoi garder le mystère ?
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body" style="padding: 0 2rem 2rem;">
+                    <div class="text-center mb-4">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🕵️‍♂️</div>
+                    </div>
+                    
+                    <div class="mystery-explanation">
+                        <h6 style="color: var(--color-pink-bubble); font-weight: 600; margin-bottom: 1rem;">
+                            🎪 L'art de la surprise fait partie du spectacle !
+                        </h6>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            Chez <strong>Pop'Cornala</strong> et les <strong>Negitachi</strong>, nous croyons que la magie opère 
+                            quand l'inattendu surgit ! Révéler tout le programme à l'avance, c'est comme spoiler 
+                            la fin d'un film... 🎬
+                        </p>
+                        
+                        <div class="row text-center mb-4">
+                            <div class="col-md-6 mb-3">
+                                <div style="background: rgba(41, 131, 190, 0.1); padding: 1.5rem; border-radius: 15px;">
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</div>
+                                    <h6 style="color: var(--color-blue-cinema); margin-bottom: 0.5rem;">Effet de Surprise</h6>
+                                    <small>Frissons garantis quand vous reconnaîtrez VOS morceaux préférés !</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div style="background: rgba(234, 86, 120, 0.1); padding: 1.5rem; border-radius: 15px;">
+                                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎵</div>
+                                    <h6 style="color: var(--color-pink-bubble); margin-bottom: 0.5rem;">Découverte Live</h6>
+                                    <small>Vivez l'émotion pure de la première écoute en direct !</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(254, 201, 12, 0.1); padding: 1.5rem; border-radius: 15px; border-left: 4px solid var(--color-yellow-popcorn); margin-bottom: 1.5rem;">
+                            <p style="margin: 0; font-style: italic;">
+                                <strong>🎁 Promesse :</strong> Le programme complet sera distribué le soir même, 
+                                en souvenir de cette soirée unique ! Et si vous êtes vraiment curieux, 
+                                jetez un œil au dossier de presse pour quelques indices... 😉
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p style="color: #666; font-size: 0.9rem; margin: 0;">
+                                Faites-nous confiance, la surprise en vaut la peine ! 🍿✨
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border: none; justify-content: center; padding: 0 2rem 2rem;">
+                    <button type="button" class="cta-button" data-bs-dismiss="modal" style="padding: 0.8rem 2rem;">
+                        <i class="fas fa-heart me-2"></i> J'ai hâte de découvrir !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Pop'Cornala - Tous droits réservés</p>
+            <p>
+                <a href="../index.html" style="color: var(--color-background); text-decoration: none;">
+                    <i class="fas fa-arrow-left me-1"></i> Retour au site principal
+                </a> | 
+                <a href="mailto:contact@popcornala.fr" style="color: var(--color-background); text-decoration: none;">
+                    <i class="fas fa-envelope me-1"></i> Contact
+                </a>
+            </p>
+            <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 1rem;">
+                Un événement exceptionnel - Deux représentations uniques - Ne le manquez pas ! 🎭
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling pour les liens internes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Effet parallax désactivé pour éviter les collisions visuelles
+
+        // Animation des émojis flottants
+        function createFloatingEmoji() {
+            const emojis = ['🍿', '🎵', '🎭', '🎤', '🎶', '⭐', '🎪'];
+            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            const floatingEmoji = document.createElement('div');
+            floatingEmoji.textContent = emoji;
+            floatingEmoji.style.cssText = `
+                position: fixed;
+                bottom: -50px;
+                left: ${Math.random() * 100}%;
+                font-size: 2rem;
+                z-index: -1;
+                opacity: 0.3;
+                pointer-events: none;
+                animation: floatUp 8s ease-out forwards;
+            `;
+            
+            document.body.appendChild(floatingEmoji);
+            
+            // Supprimer l'emoji après l'animation
+            setTimeout(() => {
+                floatingEmoji.remove();
+            }, 8000);
+        }
+
+        // CSS pour l'animation des émojis flottants
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.3;
+                }
+                50% {
+                    opacity: 0.6;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Lancer des émojis flottants de temps en temps
+        setInterval(createFloatingEmoji, 3000);
+
+        // Effet de typing pour le programme
+        const comingSoonElement = document.querySelector('.coming-soon');
+        if (comingSoonElement) {
+            const originalText = comingSoonElement.textContent;
+            comingSoonElement.textContent = '';
+            
+            setTimeout(() => {
+                let i = 0;
+                const typeInterval = setInterval(() => {
+                    if (i < originalText.length) {
+                        comingSoonElement.textContent += originalText.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeInterval);
+                    }
+                }, 100);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
