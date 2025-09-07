@@ -101,8 +101,8 @@
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, 
-                rgba(41, 131, 190, 0.1), 
+            background: linear-gradient(135deg,
+                rgba(41, 131, 190, 0.1),
                 rgba(234, 86, 120, 0.1),
                 rgba(254, 201, 12, 0.1));
             display: flex;
@@ -255,9 +255,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, 
-                rgba(41, 131, 190, 0.3), 
-                rgba(234, 86, 120, 0.3), 
+            background: linear-gradient(45deg,
+                rgba(41, 131, 190, 0.3),
+                rgba(234, 86, 120, 0.3),
                 rgba(254, 201, 12, 0.3));
             border-radius: 25px;
             z-index: -1;
@@ -285,7 +285,7 @@
 
         /* Programme Section */
         .program-section {
-            background: linear-gradient(135deg, 
+            background: linear-gradient(135deg,
                 rgba(234, 86, 120, 0.03),
                 rgba(41, 131, 190, 0.03));
             padding: 4rem 2rem;
@@ -440,7 +440,7 @@
             .hero-section {
                 padding: 100px 15px 40px;
             }
-            
+
             .poster-section,
             .info-section {
                 padding: 2rem 1rem;
@@ -479,6 +479,133 @@
             transform: translateY(0);
         }
 
+        /* Program Download Mode */
+        .program-download-container {
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .program-download-container.active {
+            display: block;
+        }
+
+        .program-download-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .program-download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                rgba(41, 131, 190, 0.3),
+                rgba(234, 86, 120, 0.3),
+                rgba(254, 201, 12, 0.3));
+            border-radius: 25px;
+            z-index: -1;
+            margin: -2px;
+        }
+
+
+        .program-title {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--color-blue-cinema);
+            text-shadow: 2px 2px 0px var(--color-yellow-popcorn);
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .program-download-btn {
+            background: linear-gradient(135deg, var(--color-pink-bubble), var(--color-blue-cinema));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Bangers', cursive;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 40px rgba(234, 86, 120, 0.4);
+            position: relative;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+
+        .program-download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: all 0.8s;
+        }
+
+        .program-download-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(234, 86, 120, 0.6);
+            color: white;
+        }
+
+        .program-download-btn:hover::before {
+            left: 100%;
+        }
+
+        .program-download-btn i {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .program-subtitle {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.2rem;
+            color: var(--color-text-default);
+            margin-bottom: 1rem;
+        }
+
+        .program-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 1.5rem;
+        }
+
+        /* Hide elements in program mode */
+        .program-mode .hide-in-program {
+            display: none !important;
+        }
+
         /* Background decoratif */
         .decorative-bg {
             position: fixed;
@@ -489,7 +616,7 @@
             z-index: -1;
             opacity: 0.02;
             pointer-events: none;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, var(--color-blue-cinema) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, var(--color-pink-bubble) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, var(--color-yellow-popcorn) 0%, transparent 50%);
@@ -568,23 +695,49 @@
                 Les Pop'Cornala rencontrent les Negitachi<br>
                 pour un weekend musical exceptionnel !
             </p>
-            
+
             <div class="hero-logos d-flex justify-content-center align-items-center gap-4 mb-3">
                 <img src="popcornala.png" alt="Logo Pop'Cornala" style="max-height: 50px; max-width: 80px; object-fit: contain; opacity: 0.9;">
                 <span style="font-size: 2.5rem; color: var(--color-pink-bubble); font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">×</span>
                 <img src="logo-negitachi.png" alt="Logo Negitachi" style="max-height: 50px; max-width: 80px; object-fit: contain; opacity: 0.9;">
             </div>
-            <div class="hero-date">
+            <div class="hero-date hide-in-program">
                 4 & 5 OCTOBRE 2025
             </div>
-            <p class="lead">
+            <p class="lead hide-in-program">
                 <strong>📍 Église de Garnison - Huningue</strong><br>
                 <em>Des poireaux, du popcorn, du fun !</em>
             </p>
-            
+
+            <!-- Program Download Mode -->
+            <div class="program-download-container" id="programDownloadContainer">
+                <div class="program-download-card">
+                    <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+                        <span style="font-size: 2rem;">📜</span>
+                        <h2 class="program-title mb-0">PROGRAMME OFFICIEL</h2>
+                        <span style="font-size: 2rem;">📜</span>
+                    </div>
+                    <p class="program-subtitle">A Cappella Pop Show 2025</p>
+                    <a href="Programme%20ACPS.pdf" class="program-download-btn" target="_blank" rel="noopener">
+                        <i class="fas fa-download"></i>
+                        TÉLÉCHARGER LE PROGRAMME
+                    </a>
+                    <p class="program-description">
+                        <strong>🎵 Découvrez le programme complet</strong><br>
+                        Toutes les chansons, les horaires détaillés et les surprises qui vous attendent !
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(254, 201, 12, 0.1); border-radius: 10px; border-left: 3px solid var(--color-yellow-popcorn);">
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-default);">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Format PDF</strong> - Compatible tous appareils
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- CTA Réservation Visible -->
-            <div class="hero-cta-container">
-                <a href="https://www.helloasso.com/associations/pop-cornala/evenements/a-cappella-pop-show" 
+            <div class="hero-cta-container hide-in-program">
+                <a href="https://www.helloasso.com/associations/pop-cornala/evenements/a-cappella-pop-show"
                    class="cta-button pulse" target="_blank" rel="noopener">
                     <i class="fas fa-ticket me-2"></i> Réserver mes places
                 </a>
@@ -596,7 +749,7 @@
             </div>
 
             <!-- Réseaux Sociaux Hero -->
-            <div class="hero-social mt-4">
+            <div class="hero-social mt-4 hide-in-program">
                 <p style="color: var(--color-text-default); background: rgba(255,255,255,0.9); padding: 0.5rem 1rem; border-radius: 15px; display: inline-block; margin-bottom: 1rem;">
                     <strong>Suivez l'événement :</strong>
                 </p>
@@ -632,7 +785,7 @@
     </section>
 
     <!-- Section Informations -->
-    <section class="container info-section">
+    <section class="container info-section hide-in-program">
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="info-card fade-in-scroll">
@@ -642,8 +795,8 @@
                     <h3 class="card-title">🍿 Les Pop'Cornala 🍿</h3>
                     <p class="card-text">
                         <strong>Huningue, Alsace</strong><br>
-                        Les Petits Pop Corn reviennent avec leur énergie communicative ! 
-                        Ensemble vocal a cappella de 7 membres, ils transforment vos références 
+                        Les Petits Pop Corn reviennent avec leur énergie communicative !
+                        Ensemble vocal a cappella de 7 membres, ils transforment vos références
                         pop-culture en harmonies vocales surprenantes.
                     </p>
                 </div>
@@ -687,7 +840,7 @@
             </div>
         </div>
 
-        <div class="info-card fade-in-scroll">
+        <div class="info-card fade-in-scroll hide-in-program">
             <h3 class="card-title">📅 Informations Pratiques</h3>
             <div class="row">
                 <div class="col-md-4 text-center mb-3">
@@ -710,14 +863,14 @@
     </section>
 
     <!-- Section Programme -->
-    <section class="container program-section fade-in-scroll text-center">
+    <section class="container program-section fade-in-scroll text-center hide-in-program">
         <h2 class="card-title">📜 Programme Musical</h2>
-        
+
         <div class="coming-soon">
             PROGRAMME COMPLET<br>
             RÉVÉLÉ LE JOUR J !
         </div>
-        
+
         <div class="row justify-content-center mb-4">
             <div class="col-lg-8">
                 <div class="info-card">
@@ -725,7 +878,7 @@
                         <strong>🎵 Au programme :</strong><br>
                         Un voyage musical épique à travers les univers qui nous passionnent !
                     </p>
-                    
+
                     <div class="row text-center mb-4">
                         <div class="col-6 col-md-3 mb-3">
                             <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎮</div>
@@ -744,23 +897,23 @@
                             <h5 style="color: var(--color-pink-bubble); font-size: 1rem;">Mèmes Internet</h5>
                         </div>
                     </div>
-                    
+
                     <p class="text-center fs-6 text-muted mb-4">
-                        Des classiques intemporels aux dernières pépites, 
+                        Des classiques intemporels aux dernières pépites,
                         des références cultes aux surprises inattendues...
                     </p>
-                    
+
                     <div class="mystery-hint p-3" style="background: rgba(254, 201, 12, 0.1); border-radius: 15px; border-left: 4px solid var(--color-yellow-popcorn);">
                         <p class="mb-0">
                             <strong>🕵️ Mystère & Suspense :</strong><br>
-                            <em>Gardez vos oreilles et vos yeux bien ouverts... 
+                            <em>Gardez vos oreilles et vos yeux bien ouverts...
                             la surprise fait partie du spectacle ! Serez-vous prêts pour ce voyage musical unique ? 🎭</em>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Téléchargements -->
         <div class="text-center">
             <h3 class="mb-3" style="color: var(--color-text-default);">📄 Pour en savoir plus</h3>
@@ -786,8 +939,8 @@
                 <div class="col-lg-6">
                     <h4 style="color: var(--color-blue-cinema);">🤝 La Rencontre</h4>
                     <p>
-                        Ce spectacle joyeux et fédérateur marque la rencontre entre deux ensembles vocaux aux univers complémentaires. 
-                        Né d'une première invitation des Negitachi en juin 2024 pour un concert parisien exceptionnel, 
+                        Ce spectacle joyeux et fédérateur marque la rencontre entre deux ensembles vocaux aux univers complémentaires.
+                        Né d'une première invitation des Negitachi en juin 2024 pour un concert parisien exceptionnel,
                         ce projet concrétise l'envie mutuelle de créer ensemble.
                     </p>
                     <p>
@@ -801,7 +954,7 @@
                         <small>Place Abbatucci - 23 rue Barbanègre<br>68330 Huningue</small>
                     </p>
                     <p>
-                        Cette église désacralisée, symbole de la région des Trois Frontières, offre une acoustique exceptionnelle 
+                        Cette église désacralisée, symbole de la région des Trois Frontières, offre une acoustique exceptionnelle
                         pour ce mariage inédit entre pop-culture et patrimoine historique.
                     </p>
                     <h5 style="color: var(--color-text-default);">🚗 Accès</h5>
@@ -866,8 +1019,8 @@
             <p class="mt-3">
                 <small>
                     <strong>💡 Le saviez-vous ?</strong><br>
-                    L'affiche de cet événement a été entièrement conçue par Elizabeth RACARY, 
-                    talentueuse chanteuse des Pop'Cornala ! Elle dissimule subtilement de nombreuses références de pop-culture... 
+                    L'affiche de cet événement a été entièrement conçue par Elizabeth RACARY,
+                    talentueuse chanteuse des Pop'Cornala ! Elle dissimule subtilement de nombreuses références de pop-culture...
                     saurez-vous toutes les retrouver ? 🕵️
                 </small>
             </p>
@@ -888,18 +1041,18 @@
                     <div class="text-center mb-4">
                         <div style="font-size: 4rem; margin-bottom: 1rem;">🕵️‍♂️</div>
                     </div>
-                    
+
                     <div class="mystery-explanation">
                         <h6 style="color: var(--color-pink-bubble); font-weight: 600; margin-bottom: 1rem;">
                             🎪 L'art de la surprise fait partie du spectacle !
                         </h6>
-                        
+
                         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                            Chez <strong>Pop'Cornala</strong> et les <strong>Negitachi</strong>, nous croyons que la magie opère 
-                            quand l'inattendu surgit ! Révéler tout le programme à l'avance, c'est comme spoiler 
+                            Chez <strong>Pop'Cornala</strong> et les <strong>Negitachi</strong>, nous croyons que la magie opère
+                            quand l'inattendu surgit ! Révéler tout le programme à l'avance, c'est comme spoiler
                             la fin d'un film... 🎬
                         </p>
-                        
+
                         <div class="row text-center mb-4">
                             <div class="col-md-6 mb-3">
                                 <div style="background: rgba(41, 131, 190, 0.1); padding: 1.5rem; border-radius: 15px;">
@@ -916,15 +1069,15 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div style="background: rgba(254, 201, 12, 0.1); padding: 1.5rem; border-radius: 15px; border-left: 4px solid var(--color-yellow-popcorn); margin-bottom: 1.5rem;">
                             <p style="margin: 0; font-style: italic;">
-                                <strong>🎁 Promesse :</strong> Le programme complet sera distribué le soir même, 
-                                en souvenir de cette soirée unique ! Et si vous êtes vraiment curieux, 
+                                <strong>🎁 Promesse :</strong> Le programme complet sera distribué le soir même,
+                                en souvenir de cette soirée unique ! Et si vous êtes vraiment curieux,
                                 jetez un œil au dossier de presse pour quelques indices... 😉
                             </p>
                         </div>
-                        
+
                         <div class="text-center">
                             <p style="color: #666; font-size: 0.9rem; margin: 0;">
                                 Faites-nous confiance, la surprise en vaut la peine ! 🍿✨
@@ -948,7 +1101,7 @@
             <p>
                 <a href="../index.html" style="color: var(--color-background); text-decoration: none;">
                     <i class="fas fa-arrow-left me-1"></i> Retour au site principal
-                </a> | 
+                </a> |
                 <a href="mailto:contact@popcornala.fr" style="color: var(--color-background); text-decoration: none;">
                     <i class="fas fa-envelope me-1"></i> Contact
                 </a>
@@ -1003,7 +1156,7 @@
         function createFloatingEmoji() {
             const emojis = ['🍿', '🎵', '🎭', '🎤', '🎶', '⭐', '🎪'];
             const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-            
+
             const floatingEmoji = document.createElement('div');
             floatingEmoji.textContent = emoji;
             floatingEmoji.style.cssText = `
@@ -1016,9 +1169,9 @@
                 pointer-events: none;
                 animation: floatUp 8s ease-out forwards;
             `;
-            
+
             document.body.appendChild(floatingEmoji);
-            
+
             // Supprimer l'emoji après l'animation
             setTimeout(() => {
                 floatingEmoji.remove();
@@ -1047,12 +1200,30 @@
         // Lancer des émojis flottants de temps en temps
         setInterval(createFloatingEmoji, 3000);
 
+        // URL Parameter Detection for Program Mode
+        const urlParams = new URLSearchParams(window.location.search);
+        const isProgramMode = urlParams.has('programme');
+
+        if (isProgramMode) {
+            document.body.classList.add('program-mode');
+            document.getElementById('programDownloadContainer').classList.add('active');
+
+            // Update page title
+            document.title = 'Programme ACPS 2025 - A Cappella Pop Show - Téléchargement';
+
+            // Update meta description
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.content = 'Téléchargez le programme officiel de l\'A Cappella Pop Show 2025 avec Pop\'Cornala et les Negitachi.';
+            }
+        }
+
         // Effet de typing pour le programme
         const comingSoonElement = document.querySelector('.coming-soon');
         if (comingSoonElement) {
             const originalText = comingSoonElement.textContent;
             comingSoonElement.textContent = '';
-            
+
             setTimeout(() => {
                 let i = 0;
                 const typeInterval = setInterval(() => {
