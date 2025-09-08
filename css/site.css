@@ -1156,6 +1156,11 @@ a.social-icon:hover {
     margin: 0.5rem auto;
 }
 
+/* Multiple social icons in thumbnails */
+.thumbnail .d-flex .social-icon {
+    margin: 0;
+}
+
 ul.social-icon li {
     display: flex;
     flex-direction: column;
