@@ -650,6 +650,49 @@
             height: 100% !important;
         }
 
+        /* Cartes partenaires */
+        .partner-card {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .partner-card-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover .partner-card-content {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .partner-logo {
+            max-height: 60px;
+            max-width: 120px;
+            object-fit: contain;
+            margin: 0 auto 1rem;
+        }
+
+        .partner-name {
+            color: #e30613;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .partner-description {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+        }
+
         /* Hero Social */
         .hero-social .social-links {
             display: flex;
@@ -977,27 +1020,53 @@
         <div class="info-card text-center">
             <h3 class="card-title">🤝 Nos Partenaires</h3>
             <p class="mb-4">Merci à ceux qui rendent ce projet possible :</p>
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-3">
-                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; min-height: 160px; display: flex; flex-direction: column; justify-content: center;">
-                        <img src="Logo_Ville_de_Huningue.jpg" alt="Logo Ville de Huningue" style="max-height: 60px; max-width: 120px; object-fit: contain; margin: 0 auto 1rem;">
-                        <h5 style="color: #173766; margin-bottom: 0.5rem; font-size: 1rem;">Ville de Huningue</h5>
-                        <p style="font-size: 0.85rem; color: #666; margin: 0;">Mise à disposition de la salle<br>& soutien financier</p>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://www.huningue.fr/" target="_blank" rel="noopener" class="partner-card">
+                        <div class="partner-card-content">
+                            <img src="Logo_Ville_de_Huningue.jpg" alt="Logo Ville de Huningue" class="partner-logo">
+                            <h5 class="partner-name">Ville de Huningue</h5>
+                            <p class="partner-description">Mise à disposition de la salle<br>& soutien financier</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; min-height: 160px; display: flex; flex-direction: column; justify-content: center;">
-                        <img src="credit-mutuel.jpg" alt="Logo Crédit Mutuel" style="max-height: 50px; max-width: 120px; object-fit: contain; margin: 0 auto 1rem;">
-                        <h5 style="color: #e30613; margin-bottom: 0.5rem; font-size: 1rem;">Crédit Mutuel</h5>
-                        <p style="font-size: 0.85rem; color: #666; margin: 0;">Partenaire financier<br>du projet</p>
-                    </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://www.creditmutuel.fr/" target="_blank" rel="noopener" class="partner-card">
+                        <div class="partner-card-content">
+                            <img src="credit-mutuel.jpg" alt="Logo Crédit Mutuel" class="partner-logo">
+                            <h5 class="partner-name">Crédit Mutuel</h5>
+                            <p class="partner-description">Partenaire financier<br>du projet</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; min-height: 160px; display: flex; flex-direction: column; justify-content: center;">
-                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎵</div>
-                        <h5 style="color: var(--color-blue-cinema); margin-bottom: 0.5rem; font-size: 1rem;">Association Turbulence</h5>
-                        <p style="font-size: 0.85rem; color: #666; margin: 0;">Soutien artistique<br>et logistique</p>
-                    </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://betsytherapie.webnode.fr/" target="_blank" rel="noopener" class="partner-card">
+                        <div class="partner-card-content">
+                            <img src="atelier-de-betsy.jpg" alt="Logo L'Atelier de Betsy" class="partner-logo">
+                            <h5 class="partner-name">L'Atelier de Betsy</h5>
+                            <p class="partner-description">Fourniture d'accessoires<br>scéniques</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://enviedepain.fr/" target="_blank" rel="noopener" class="partner-card">
+                        <div class="partner-card-content">
+                            <img src="envie-de-pain.jpg" alt="Logo Envie de Pain" class="partner-logo">
+                            <h5 class="partner-name">Envie de Pain</h5>
+                            <p class="partner-description">Catering pour<br>les artistes</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://turbulence68.jimdofree.com/" target="_blank" rel="noopener" class="partner-card">
+                        <div class="partner-card-content">
+                            <img src="turbulence.jpg" alt="Logo Association Turbulence" class="partner-logo">
+                            <h5 class="partner-name">Association Turbulence</h5>
+                            <p class="partner-description">Soutien artistique<br>et logistique</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
