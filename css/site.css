@@ -33,6 +33,14 @@ body {
     background-color: var(--color-background);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Default padding with banner visible */
+    padding-top: 128px;
+    transition: padding-top 0.3s ease;
+}
+
+/* When banner is hidden */
+body.acps-banner-hidden {
+    padding-top: 78px;
 }
 
 /* ===================================

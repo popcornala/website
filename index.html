@@ -91,6 +91,7 @@
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/members.css">
+    <link rel="stylesheet" href="css/acps-banner.css">
 </head>
 
 <body>
@@ -160,6 +161,81 @@
             </div>
         </div>
     </nav>
+
+    <!-- ACPS Banner -->
+    <div id="acpsBanner" class="acps-banner-scroll">
+        <div class="acps-banner-container">
+            <div class="acps-banner-content-scroll">
+                <span class="acps-banner-text">
+                    <i class="fas fa-star"></i> ÉVÉNEMENT SPÉCIAL <i class="fas fa-music"></i> A Cappella Pop Show <i class="fas fa-calendar-alt"></i> 4-5 Oct 2025 <i class="fas fa-mouse-pointer"></i> cliquer pour en savoir plus
+                </span>
+                <span class="acps-banner-text" aria-hidden="true">
+                    <i class="fas fa-star"></i> ÉVÉNEMENT SPÉCIAL <i class="fas fa-music"></i> A Cappella Pop Show <i class="fas fa-calendar-alt"></i> 4-5 Oct 2025 <i class="fas fa-mouse-pointer"></i> cliquer pour en savoir plus
+                </span>
+                <span class="acps-banner-text" aria-hidden="true">
+                    <i class="fas fa-star"></i> ÉVÉNEMENT SPÉCIAL <i class="fas fa-music"></i> A Cappella Pop Show <i class="fas fa-calendar-alt"></i> 4-5 Oct 2025 <i class="fas fa-mouse-pointer"></i> cliquer pour en savoir plus
+                </span>
+                <span class="acps-banner-text" aria-hidden="true">
+                    <i class="fas fa-star"></i> ÉVÉNEMENT SPÉCIAL <i class="fas fa-music"></i> A Cappella Pop Show <i class="fas fa-calendar-alt"></i> 4-5 Oct 2025 <i class="fas fa-mouse-pointer"></i> cliquer pour en savoir plus
+                </span>
+                <span class="acps-banner-text" aria-hidden="true">
+                    <i class="fas fa-star"></i> ÉVÉNEMENT SPÉCIAL <i class="fas fa-music"></i> A Cappella Pop Show <i class="fas fa-calendar-alt"></i> 4-5 Oct 2025 <i class="fas fa-mouse-pointer"></i> cliquer pour en savoir plus
+                </span>
+            </div>
+            <button class="acps-banner-close" id="closeBanner" aria-label="Fermer le banner">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ACPS Modal -->
+    <div class="modal fade" id="acpsModal" tabindex="-1" aria-labelledby="acpsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content acps-modal-design">
+                <div class="modal-header acps-modal-header">
+                    <h5 class="modal-title acps-modal-title" id="acpsModalLabel">
+                        <i class="fas fa-star"></i>
+                        A Cappella Pop Show
+                        <i class="fas fa-star"></i>
+                    </h5>
+                    <button type="button" class="btn-close acps-btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body acps-modal-body">
+                    <div class="text-center">
+                        <!-- Concert Image -->
+                        <div class="acps-image-container">
+                            <img src="acps/affiche.png" alt="Affiche A Cappella Pop Show 2025" class="acps-concert-image">
+                            <div class="acps-image-overlay">
+                                <div class="acps-text-overlay">
+                                    <div class="acps-event-badge">
+                                        4-5 Oct 2025
+                                    </div>
+                                    <h6 class="acps-subtitle">
+                                        Les Pop'Cornala rencontrent les Negitachi
+                                    </h6>
+                                    <p class="acps-venue">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Église de Garnison - Huningue
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer acps-modal-footer">
+                    <a href="acps/index.html" class="btn acps-btn-primary">
+                        <i class="fas fa-info-circle"></i>
+                        En savoir plus
+                    </a>
+                    <a href="https://www.helloasso.com/associations/pop-cornala/evenements/a-cappella-pop-show"
+                       target="_blank" rel="noopener" class="btn acps-btn-secondary">
+                        <i class="fas fa-ticket"></i>
+                        Réserver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Sections -->
     <!-- Modern Hero Section -->
@@ -1232,6 +1308,96 @@
                 } else {
                     $(this).removeClass('is-valid').addClass('is-invalid');
                 }
+            });
+
+            // ACPS Banner and Modal functionality
+            function initACPSFeatures() {
+                const banner = $('#acpsBanner');
+                const modal = $('#acpsModal');
+                const closeBannerBtn = $('#closeBanner');
+
+                // Show banner by default
+                $('body').removeClass('acps-banner-hidden');
+
+                // Show modal by default after a short delay
+                setTimeout(function() {
+                    // Always show modal on page load (remove session restriction)
+                    modal.modal('show');
+                }, 1000);
+
+                // Banner click to redirect to ACPS page
+                banner.on('click', function(e) {
+                    // Don't redirect if clicking close button
+                    if (!$(e.target).closest('.acps-banner-close').length) {
+                        window.location.href = 'acps/index.html';
+                    }
+                });
+
+                // Close banner functionality
+                closeBannerBtn.on('click', function(e) {
+                    e.stopPropagation(); // Prevent banner click
+                    banner.addClass('hidden');
+                    $('body').addClass('acps-banner-hidden');
+
+                    // Save banner close state
+                    localStorage.setItem('acpsBannerClosed', 'true');
+                });
+
+                // Check if banner was previously closed
+                if (localStorage.getItem('acpsBannerClosed') === 'true') {
+                    banner.addClass('hidden');
+                    $('body').addClass('acps-banner-hidden');
+                }
+
+                // Pause banner animation on hover for better UX
+                banner.hover(
+                    function() {
+                        $(this).find('.acps-banner-content-scroll').css('animation-play-state', 'paused');
+                    },
+                    function() {
+                        $(this).find('.acps-banner-content-scroll').css('animation-play-state', 'running');
+                    }
+                );
+
+                // Modal shown event
+                modal.on('shown.bs.modal', function() {
+                    console.log('ACPS Modal opened');
+                    // Add animation to modal elements
+                    $('.acps-concert-image').addClass('animate__animated animate__zoomIn');
+                    $('.acps-event-details').addClass('animate__animated animate__fadeInUp');
+                });
+
+                // Modal hidden event
+                modal.on('hidden.bs.modal', function() {
+                    // Remove animation classes for next time
+                    $('.acps-concert-image').removeClass('animate__animated animate__zoomIn');
+                    $('.acps-event-details').removeClass('animate__animated animate__fadeInUp');
+                });
+
+                // Keyboard accessibility for banner
+                banner.on('keypress', function(e) {
+                    if (e.which === 13 || e.which === 32) { // Enter or Space
+                        e.preventDefault();
+                        window.location.href = 'acps/index.html';
+                    }
+                });
+
+                // Close banner with Escape key when focused
+                banner.on('keydown', function(e) {
+                    if (e.which === 27) { // Escape key
+                        e.preventDefault();
+                        closeBannerBtn.click();
+                    }
+                });
+            }
+
+            // Initialize ACPS features
+            initACPSFeatures();
+
+            // Enhanced poster click to redirect to know more
+            $('.acps-image-container, .acps-concert-image').on('click', function() {
+                // Redirect to ACPS page
+                window.location.href = 'acps/index.html';
             });
 
             $('.pop').on('click', function () {
