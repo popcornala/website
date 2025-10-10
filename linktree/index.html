@@ -166,14 +166,32 @@
             margin-bottom: 1rem;
         }
 
+        .tagline-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
         .tagline {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
             font-size: 1rem;
             color: var(--color-text-default);
             background: rgba(255, 255, 255, 0.9);
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
-            display: inline-block;
-            margin-bottom: 1rem;
+            margin: 0;
+        }
+
+        .popcorn-emoji {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .tagline-text {
+            font-size: 1rem;
         }
 
         /* Liens */
@@ -393,20 +411,17 @@
             </div>
             <h1 class="main-title">Pop'Cornala</h1>
             <p class="subtitle">Ensemble vocal a cappella</p>
-            <p class="tagline">🍿 Groupe a cappella fan de films, séries, jeux vidéo, pubs et mèmes ! 🍿</p>
+            <div class="tagline-container">
+                <div class="tagline">
+                    <span class="popcorn-emoji">🍿</span>
+                    <span class="tagline-text">Groupe a cappella fan de films, séries, jeux vidéo, pubs et mèmes !</span>
+                    <span class="popcorn-emoji">🍿</span>
+                </div>
+            </div>
         </div>
 
         <!-- Liens principaux -->
         <div class="links-container">
-            <!-- Programme ACPS -->
-            <a href="https://www.popcornala.fr/acps/Programme%20ACPS.pdf" class="link-item fade-in-up" target="_blank" rel="noopener">
-                <i class="fas fa-file-download link-icon concert"></i>
-                <div class="link-content">
-                    <div class="link-title">Programme ACPS 2025</div>
-                    <div class="link-description">Télécharger le programme complet</div>
-                </div>
-            </a>
-
             <!-- Don -->
             <a href="https://www.helloasso.com/associations/pop-cornala/formulaires/1" class="link-item fade-in-up" target="_blank" rel="noopener">
                 <i class="fas fa-heart link-icon ticket"></i>
@@ -462,7 +477,7 @@
         <div class="footer">
             <div class="footer-text">
                 <strong>Pop'Cornala</strong> • Ensemble vocal a cappella • Huningue, France<br>
-                <small>#PopCornala #ACappella #ACPS2025</small>
+                <small>#PopCornala #ACappella</small>
             </div>
         </div>
     </div>
