@@ -896,7 +896,8 @@ img.flag {
 }
 
 .sponsor-logo {
-    width: 100px;
+    height: 60px;
+    width: auto;
 }
 
 .imagepreview {
