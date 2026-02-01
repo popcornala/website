@@ -500,6 +500,28 @@
                             <i class="fab fa-facebook fa-disabled"></i>
                         </div>
                     </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2026-02-27">
+                        <div class="thumbnail">
+                            <div class="to-come">
+                                <img loading="lazy" src="images/concerts/hirsingue.png" alt="Pop-quizz Hirsingue">
+                            </div>
+                            <p><strong>Dorfus, Hirsingue</strong></p>
+                            <p>Vendredi 27 février 2026 à 20h</p>
+                            <p><span>Pop-quizz au Dorfus<br>Venez tester vos connaissances pop culture !</span></p>
+                            <i class="fab fa-facebook fa-disabled"></i>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 no-share" data-concert-date="2026-02-08">
+                        <div class="thumbnail">
+                            <div class="to-come">
+                                <img loading="lazy" src="images/concerts/efa-68-logo.png" alt="Quiz Musical EFA 68">
+                            </div>
+                            <p><strong>Quiz Musical, Ingersheim</strong></p>
+                            <p>Samedi 8 février 2026</p>
+                            <p><span>Assemblée Générale EFA 68<br>suivie d'un quiz musical</span></p>
+                            <i class="fab fa-facebook fa-disabled"></i>
+                        </div>
+                    </div>
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4" data-concert-date="2025-11-28">
                         <div class="thumbnail">
                             <div class="to-come">
@@ -1400,9 +1422,10 @@
                     var $thumbnail = $concertCard.find('.thumbnail');
                     var isTocome = $thumbnail.find('.to-come').length > 0;
                     var isComingSoon = concertDate === '2099-12-31'; // Generic "coming soon" card
-                    
-                    // Only add share button for future concerts (excluding generic "coming soon")
-                    if (isTocome && concertDate > today && !isComingSoon) {
+                    var hasNoShare = $concertCard.hasClass('no-share'); // Check if concert has no-share class
+
+                    // Only add share button for future concerts (excluding generic "coming soon" and no-share)
+                    if (isTocome && concertDate > today && !isComingSoon && !hasNoShare) {
                         // Extract concert info from thumbnail
                         var concertTitle = $thumbnail.find('p strong').first().text();
                         var concertDateText = $thumbnail.find('p').eq(1).text();
