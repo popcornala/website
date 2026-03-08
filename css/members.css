@@ -185,6 +185,11 @@
     background: rgba(var(--color-force-violette), .5);
 }
 
+.box-force-grise:after,
+.box-force-grise:before {
+    background: rgba(90, 90, 90, .6);
+}
+
 /* === Custom Tooltips === */
 .custom-tooltip::before {
     text-decoration: underline;
