@@ -364,10 +364,13 @@ p {
    =================================== */
 
 #accueil {
-    background-image: url('../images/background-web.webp');
+    background-image: url('../images/hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 30%;
+    /* 34% = la ligne des yeux dans l'image. background-position en pourcentage
+       aligne ce point de l'image sur le meme point du conteneur, donc les visages
+       restent au meme niveau quelle que soit la resolution. */
+    background-position: center 34%;
     position: relative;
     overflow: hidden;
     min-height: 100vh;

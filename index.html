@@ -92,96 +92,6 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/members.css">
 
-    <!-- ===== HERO TEST START - temporaire, a supprimer une fois l'image choisie ===== -->
-    <script>
-        (function () {
-            // Le selecteur n'apparait qu'avec ?showHeroes=true, ou systematiquement
-            // quand la page est ouverte en local (file://).
-            var qs = location.search;
-            var allowed = location.protocol === 'file:'
-                || /[?&]showHeroes=(?:true|1)(?:&|$)/.test(qs);
-            document.documentElement.setAttribute('data-hero-switch', allowed ? 'on' : 'off');
-
-            var h = 'courante';
-            try { h = localStorage.getItem('heroVariant') || 'courante'; } catch (e) { }
-            // ?hero=new1|new2|courante force la variante (captures, partage d'un lien cible)
-            if (allowed) {
-                var q = /[?&]hero=(courante|new1|new2)(?:&|$)/.exec(qs);
-                if (q) { h = q[1]; try { localStorage.setItem('heroVariant', h); } catch (e) { } }
-            }
-            document.documentElement.setAttribute('data-hero', h);
-        })();
-    </script>
-    <style>
-        /* Une seule image, aucun basculement.
-           new2 est en ratio 0.52 : assez etroit pour que cover rogne verticalement
-           sur tout le domaine paysage, et horizontalement seulement sur telephone,
-           ou il reste alors 5.6% de marge de chaque cote des visages.
-           La position en % epingle la ligne des tetes : background-position: center 34%
-           aligne le point a 36% de l'image sur le point a 36% du conteneur, or c'est
-           exactement la ou sont les tetes. Elles restent donc au meme niveau partout. */
-        html[data-hero="new1"] #accueil {
-            background-image: url('images/hero-new1.webp');
-            background-position: center 34%;
-        }
-
-        html[data-hero="new2"] #accueil {
-            background-image: url('images/hero-new2.webp');
-            background-position: center 34%;
-        }
-
-        /* Voiles adaptes, sombres en bas comme la regle de base :
-           new1 est deja sombre, new2 est clair et en demande plus. */
-        html[data-hero="new1"] #accueil::before {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 30%, rgba(0, 0, 0, 0.05) 65%);
-        }
-
-        html[data-hero="new2"] #accueil::before {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.2) 65%);
-        }
-
-        /* Le selecteur */
-        #hero-test-switch {
-            position: fixed;
-            right: 0.75rem;
-            bottom: 0.75rem;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            padding: 0.4rem 0.55rem;
-            border-radius: 999px;
-            background: rgba(20, 20, 25, 0.88);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-            font: 600 0.72rem/1 system-ui, sans-serif;
-            color: #fff;
-        }
-
-        #hero-test-switch .hts-label {
-            opacity: 0.65;
-            padding-left: 0.2rem;
-        }
-
-        #hero-test-switch button {
-            border: 0;
-            cursor: pointer;
-            padding: 0.35rem 0.6rem;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.14);
-            color: #fff;
-            font: inherit;
-        }
-
-        #hero-test-switch button:hover {
-            background: rgba(255, 255, 255, 0.28);
-        }
-
-        #hero-test-switch button[aria-pressed="true"] {
-            background: #fff;
-            color: #14141a;
-        }
-    </style>
-    <!-- ===== HERO TEST END ===== -->
 </head>
 
 <body class="acps-banner-hidden">
@@ -356,7 +266,7 @@
                     <div class="member-card">
                         <div class="box box-force-orange"> <img width="432" height="516" loading="lazy" src="images/singers/hugo.png" alt="Hugo">
                             <h3 class="title">Hugo</h3>
-                            <h4 class="singer-subtitle">TBD</h4>
+                            <h4 class="singer-subtitle">Globe-trotteur</h4>
                             <ul class="icon">
                                 <li><i class="fa fa-film" data-bs-toggle="tooltip" data-bs-trigger="hover"
                                         data-bs-placement="left" data-bs-title="Alice in Borderland"
@@ -517,30 +427,6 @@
                                         data-bs-custom-class="custom-tooltip custom-tooltip-superpower"></i></li>
                                 <li><i class="fa fa-star" data-bs-toggle="tooltip" data-bs-trigger="hover"
                                         data-bs-placement="left" data-bs-title="Qui-Gon Jinn"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-hero"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="member-card">
-                        <div class="box box-force-grise"> <img width="432" height="516" loading="lazy" src="images/singers/vince.png" alt="Vince">
-                            <h3 class="title">Vince</h3>
-                            <h4 class="singer-subtitle">From the deep forest</h4>
-                            <ul class="icon">
-                                <li><i class="fa fa-film" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Double strike"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-film"></i></li>
-                                <li><i class="fa fa-tv" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Les mondes en glous ch'tis"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-anime"></i></li>
-                                <li><i class="fa fa-gamepad" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Doom / Doom 2"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-game"></i></li>
-                                <li><i class="fa fa-tornado" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left"
-                                        data-bs-title="Un deuxième neurone hyperconnectable au premier existant"
-                                        data-bs-custom-class="custom-tooltip custom-tooltip-superpower"></i></li>
-                                <li><i class="fa fa-star" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                        data-bs-placement="left" data-bs-title="Capitaine Caverne"
                                         data-bs-custom-class="custom-tooltip custom-tooltip-hero"></i></li>
                             </ul>
                         </div>
@@ -1762,43 +1648,6 @@
         });
     </script>
 
-    <!-- ===== HERO TEST START - temporaire, a supprimer une fois l'image choisie ===== -->
-    <div id="hero-test-switch" hidden role="group" aria-label="Choix de l'image de fond de la section Accueil">
-        <span class="hts-label">Hero</span>
-        <button type="button" data-hero-set="courante">Courante</button>
-        <button type="button" data-hero-set="new1">New 1</button>
-        <button type="button" data-hero-set="new2">New 2</button>
-    </div>
-    <script>
-        (function () {
-            var box = document.getElementById('hero-test-switch');
-            if (document.documentElement.getAttribute('data-hero-switch') !== 'on') {
-                box.remove();
-                return;
-            }
-            box.hidden = false;
-            var buttons = box.querySelectorAll('button[data-hero-set]');
-
-            function sync() {
-                var current = document.documentElement.getAttribute('data-hero');
-                buttons.forEach(function (b) {
-                    b.setAttribute('aria-pressed', b.getAttribute('data-hero-set') === current ? 'true' : 'false');
-                });
-            }
-
-            box.addEventListener('click', function (e) {
-                var btn = e.target.closest('button[data-hero-set]');
-                if (!btn) return;
-                var value = btn.getAttribute('data-hero-set');
-                document.documentElement.setAttribute('data-hero', value);
-                try { localStorage.setItem('heroVariant', value); } catch (err) { }
-                sync();
-            });
-
-            sync();
-        })();
-    </script>
-    <!-- ===== HERO TEST END ===== -->
 </body>
 
 </html>
