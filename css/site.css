@@ -34,13 +34,14 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     /* Default padding with banner visible */
-    padding-top: 128px;
+    --nav-offset: 128px;
+    padding-top: var(--nav-offset);
     transition: padding-top 0.3s ease;
 }
 
 /* When banner is hidden */
 body.acps-banner-hidden {
-    padding-top: 78px;
+    --nav-offset: 78px;
 }
 
 /* ===================================
@@ -370,9 +371,19 @@ p {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    /* On annule le decalage de la barre fixe pour que le hero occupe exactement
+       100vh depuis le haut du viewport. Sans ca, ce decalage constant fait deriver
+       la ligne des tetes de ~4 points selon la hauteur d'ecran. */
+    margin-top: calc(-1 * var(--nav-offset));
+    padding-top: var(--nav-offset);
     display: flex;
+    /* Direction explicite : sans elle, .section bascule le hero en colonne au-dessus
+       de 992px et inverse le role de justify-content / align-items (saut a 990). */
+    flex-direction: column;
+    /* Contenu ancre en bas : il ne recouvre jamais les visages, quel que soit le ratio */
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
+    padding-bottom: clamp(2.5rem, 6.5vh, 5rem);
 }
 
 #accueil::before {
@@ -382,7 +393,8 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    /* Voile sombre en bas, sous le texte ; le haut reste clair pour les visages */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0.12) 65%);
     z-index: 1;
 }
 
@@ -415,17 +427,9 @@ p {
     border-radius: 50px;
 }
 
-/* Hero Section Mobile */
+/* Seul breakpoint du hero : logo a cote du titre plutot qu'au-dessus.
+   L'alignement vertical et le voile sont desormais identiques partout. */
 @media (min-width: 1281px) {
-    #accueil {
-        justify-content: flex-start;
-        padding-top: 5rem;
-    }
-
-    #accueil::before {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.1) 50%);
-    }
-
     .subtitle {
         display: flex;
         flex-direction: row;
@@ -444,16 +448,6 @@ p {
     .hero-tagline {
         display: block;
         font-size: clamp(1rem, 1.8vw, 1.6rem);
-    }
-}
-
-@media (max-width: 1280px) {
-    #accueil {
-        background-size: cover;
-        background-position: center 30%;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-top: 1.5rem;
     }
 }
 
