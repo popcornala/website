@@ -14,3 +14,4 @@ Disallow: /*.svg$
 # Allow access to important images for social media
 Allow: /images/logo.png
 Allow: /images/photo1.png
+Allow: /acps2/media/partage.jpg

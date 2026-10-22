@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>ACPS 2 · A Cappella Pop Show · 5 & 6 juin 2027 · Huningue</title>
+    <meta name="description" content="Notez la date ! L'A Cappella Pop Show revient les 5 et 6 juin 2027 au Triangle, à Huningue : Pop'Cornala × Negitachi, deuxième édition. Programme secret, billetterie bientôt.">
+    <meta name="keywords" content="ACPS 2, A Cappella Pop Show, Pop'Cornala, Negitachi, a cappella, juin 2027, Huningue, Le Triangle">
+    <meta name="author" content="Pop'Cornala">
+    <link rel="canonical" href="https://www.popcornala.fr/acps2/">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.popcornala.fr/acps2/">
+    <meta property="og:title" content="Notez la date ! ACPS 2 · 5 & 6 juin 2027 · Huningue">
+    <meta property="og:description" content="L'A Cappella Pop Show revient au Triangle, à Huningue. Mais qui sont ces deux ombres ?">
+    <meta property="og:image" content="https://www.popcornala.fr/acps2/media/partage.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="Notez la date : ACPS 2, A Cappella Pop Show, 5 et 6 juin 2027, Le Triangle, Huningue">
+    <meta property="og:video" content="https://www.popcornala.fr/acps2/media/notez-la-date.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1920">
+    <meta property="og:video:height" content="1080">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notez la date ! ACPS 2 · 5 & 6 juin 2027">
+    <meta name="twitter:description" content="L'A Cappella Pop Show revient au Triangle, à Huningue.">
+    <meta name="twitter:image" content="https://www.popcornala.fr/acps2/media/partage.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Événement pour les moteurs de recherche -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "name": "ACPS 2 – A Cappella Pop Show",
+        "description": "Deuxième édition de l'A Cappella Pop Show : Pop'Cornala × Negitachi.",
+        "startDate": "2027-06-05",
+        "endDate": "2027-06-06",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": "https://www.popcornala.fr/acps2/media/partage.jpg",
+        "url": "https://www.popcornala.fr/acps2/",
+        "location": {
+            "@type": "Place",
+            "name": "Le Triangle",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Huningue",
+                "postalCode": "68330",
+                "addressCountry": "FR"
+            }
+        },
+        "organizer": { "@type": "Organization", "name": "Pop'Cornala", "url": "https://www.popcornala.fr/" },
+        "performer": [
+            { "@type": "MusicGroup", "name": "Pop'Cornala", "url": "https://www.popcornala.fr/" },
+            { "@type": "MusicGroup", "name": "Negitachi", "url": "https://negitachi.fr" }
+        ]
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400..700&family=Inter:wght@400..800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Couleurs Pop'Cornala (comme la page ACPS 2025 et les teasers) */
+        :root {
+            --color-background: rgb(255, 248, 219);
+            --color-text-default: rgb(23, 55, 102);
+            --color-yellow-popcorn: rgb(254, 201, 12);
+            --color-blue-cinema: rgb(41, 131, 190);
+            --color-pink-bubble: rgb(234, 86, 120);
+            --color-shadow: rgb(20, 30, 70);
+            --color-white: #fff;
+            --radius: 22px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-default);
+            background-color: var(--color-background);
+            /* les pois roses du carton de fin */
+            background-image: radial-gradient(rgba(234, 86, 120, 0.16) 3px, transparent 3.5px);
+            background-size: 46px 46px;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .bangers {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 0.03em;
+            font-weight: 400;
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 248, 219, 0.96);
+            border-bottom: 2px solid var(--color-text-default);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 60px;
+        }
+
+        .nav a {
+            font-family: 'Bangers', cursive;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: var(--color-pink-bubble);
+        }
+
+        .nav-tag {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ── Hero : le carton « Notez la date » ── */
+        .hero {
+            position: relative;
+            padding: 48px 0 32px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: end;
+            gap: 8px;
+        }
+
+        .hero-main {
+            text-align: center;
+        }
+
+        .kicker {
+            display: inline-block;
+            margin: 0;
+            font-size: clamp(2.6rem, 9vw, 4.6rem);
+            line-height: 1;
+            color: var(--color-pink-bubble);
+            transform: rotate(-4deg);
+            -webkit-text-stroke: 2px var(--color-text-default);
+            text-shadow: 5px 5px 0 var(--color-yellow-popcorn);
+        }
+
+        .title {
+            margin: 18px 0 0;
+            line-height: 0.95;
+        }
+
+        .title-acps {
+            display: block;
+            font-size: clamp(5.5rem, 22vw, 10rem);
+            color: var(--color-blue-cinema);
+            -webkit-text-stroke: 4px var(--color-text-default);
+            text-shadow: 9px 9px 0 var(--color-yellow-popcorn);
+        }
+
+        .title-show {
+            display: block;
+            margin-top: 6px;
+            font-size: clamp(1.9rem, 6.5vw, 3rem);
+            color: var(--color-pink-bubble);
+        }
+
+        .date-wrap {
+            position: relative;
+            display: inline-block;
+            margin: 26px 0 8px;
+        }
+
+        .date-pill {
+            display: inline-block;
+            padding: 10px 34px 6px;
+            font-size: clamp(2.3rem, 8.5vw, 3.8rem);
+            line-height: 1.1;
+            background: var(--color-yellow-popcorn);
+            border: 4px solid var(--color-text-default);
+            border-radius: 999px;
+            transform: rotate(-2deg);
+            box-shadow: 0 6px 0 rgba(23, 55, 102, 0.18);
+        }
+
+        /* le cercle au feutre, comme dans la vidéo */
+        .marker {
+            position: absolute;
+            inset: -22px -30px -20px -34px;
+            width: calc(100% + 64px);
+            height: calc(100% + 42px);
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        .marker path {
+            fill: none;
+            stroke: var(--color-pink-bubble);
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            opacity: 0.9;
+            animation: draw 0.9s ease-in-out 0.9s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .place {
+            margin: 10px 0 0;
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+            font-weight: 600;
+        }
+
+        .days {
+            display: inline-block;
+            margin: 14px 0 0;
+            padding: 6px 18px 4px;
+            font-size: 1.5rem;
+            color: var(--color-white);
+            background: var(--color-text-default);
+            border-radius: 999px;
+            transform: rotate(1.5deg);
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin: 22px 0 0;
+        }
+
+        .logos img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logos .times {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Agenda */
+        .agenda {
+            margin: 26px auto 0;
+        }
+
+        .agenda-label {
+            margin: 0 0 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--color-text-default);
+            background: var(--color-white);
+            border: 3px solid var(--color-text-default);
+            border-radius: 999px;
+            box-shadow: 4px 4px 0 var(--color-text-default);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover,
+        .btn:focus-visible {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--color-text-default);
+        }
+
+        .btn-primary {
+            background: var(--color-pink-bubble);
+            color: var(--color-white);
+        }
+
+        .btn-yellow {
+            background: var(--color-yellow-popcorn);
+        }
+
+        .see-teaser {
+            margin-top: 14px;
+        }
+
+        /* Les deux ombres mystère */
+        .shadow-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 56px;
+            margin-top: 34px;
+        }
+
+        .shadow {
+            position: relative;
+            margin: 0;
+        }
+
+        .shadow img {
+            display: block;
+            height: auto;
+            animation: bob 2.4s ease-in-out infinite;
+        }
+
+        .shadow-1 img {
+            width: 104px;
+        }
+
+        .shadow-2 img {
+            width: 134px;
+            animation-delay: -1.2s;
+        }
+
+        .shadow::after {
+            content: '?';
+            position: absolute;
+            top: -8px;
+            right: -26px;
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--color-yellow-popcorn);
+            -webkit-text-stroke: 2px var(--color-text-default);
+            animation: wobble 1.8s ease-in-out infinite;
+        }
+
+        .shadow-2::after {
+            top: -30px;
+            right: auto;
+            left: -22px;
+            animation-delay: -0.9s;
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(-6px) scaleY(1.02);
+            }
+        }
+
+        @keyframes wobble {
+            50% {
+                transform: rotate(14deg) translateY(-6px);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero {
+                padding: 56px 0 40px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr 2.2fr 1fr;
+            }
+
+            .hero-shadow-l {
+                order: -1;
+            }
+
+            .shadow-row {
+                display: contents;
+            }
+
+            .shadow {
+                justify-self: center;
+                margin-bottom: 30px;
+            }
+
+            .shadow-1 img {
+                width: 200px;
+            }
+
+            .shadow-2 img {
+                width: 250px;
+            }
+
+            .shadow::after {
+                font-size: 4.5rem;
+            }
+        }
+
+        /* ── Sections ── */
+        section {
+            padding: 40px 0;
+        }
+
+        .h2 {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: clamp(2.2rem, 7vw, 3.4rem);
+            line-height: 1.05;
+            color: var(--color-blue-cinema);
+            -webkit-text-stroke: 1.5px var(--color-text-default);
+            text-shadow: 4px 4px 0 var(--color-yellow-popcorn);
+        }
+
+        .lead {
+            max-width: 680px;
+            margin: 0 auto 26px;
+            text-align: center;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border: 3px solid var(--color-text-default);
+            border-radius: var(--radius);
+            box-shadow: 6px 6px 0 var(--color-text-default);
+            padding: 24px;
+        }
+
+        /* Vidéo */
+        .video-card {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10px;
+            background: var(--color-text-default);
+        }
+
+        .video-card video {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 14px;
+            background: var(--color-shadow);
+        }
+
+        .sound {
+            margin: 14px 0 0;
+            text-align: center;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Infos pratiques */
+        .infos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+        }
+
+        @media (min-width: 768px) {
+            .infos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info-icon {
+            display: inline-grid;
+            place-items: center;
+            width: 58px;
+            height: 58px;
+            margin-bottom: 8px;
+            font-size: 1.6rem;
+            color: var(--color-white);
+            border: 3px solid var(--color-text-default);
+            border-radius: 50%;
+        }
+
+        .info h3 {
+            margin: 0 0 6px;
+            font-size: 1.9rem;
+            line-height: 1.1;
+        }
+
+        .info p {
+            margin: 0 0 6px;
+        }
+
+        .info small {
+            color: rgba(23, 55, 102, 0.75);
+        }
+
+        .info a {
+            font-weight: 600;
+            color: var(--color-blue-cinema);
+        }
+
+        /* Retour 2025 */
+        .duo {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+            margin-top: 22px;
+        }
+
+        @media (min-width: 768px) {
+            .duo {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .group {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .group img {
+            flex: none;
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+        }
+
+        .group h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 1.1;
+        }
+
+        .group p {
+            margin: 2px 0 0;
+        }
+
+        .universes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .universes li {
+            padding: 6px 14px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            background: rgba(254, 201, 12, 0.25);
+            border: 2px solid var(--color-text-default);
+            border-radius: 999px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Réseaux */
+        .follow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+        }
+
+        @media (min-width: 768px) {
+            .follow {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .follow h3 {
+            margin: 0 0 12px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social {
+            display: inline-grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            font-size: 1.45rem;
+            text-decoration: none;
+            color: var(--color-white);
+            background: var(--color-text-default);
+            border-radius: 50%;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+
+        .social:hover,
+        .social:focus-visible {
+            transform: translateY(-3px) rotate(-6deg);
+            background: var(--color-pink-bubble);
+        }
+
+        .hashtags {
+            margin: 22px 0 0;
+            text-align: center;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Pied de page */
+        .footer {
+            margin-top: 30px;
+            padding: 30px 0;
+            text-align: center;
+            color: var(--color-background);
+            background: var(--color-text-default);
+        }
+
+        .footer p {
+            margin: 4px 0;
+        }
+
+        .footer a {
+            color: var(--color-yellow-popcorn);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .marker path {
+                animation: none;
+                stroke-dashoffset: 0;
+            }
+
+            .shadow img,
+            .shadow::after {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="wrap">
+            <a href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Pop'Cornala</a>
+            <span class="nav-tag">ACPS 2 · 2027</span>
+        </div>
+    </nav>
+
+    <!-- Hero : le carton « Notez la date » -->
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-main">
+                <p class="kicker bangers">Notez la date !</p>
+                <h1 class="title bangers">
+                    <span class="title-acps">ACPS 2</span>
+                    <span class="title-show">A Cappella Pop Show</span>
+                </h1>
+
+                <div class="date-wrap">
+                    <span class="date-pill bangers">5 &amp; 6 juin 2027</span>
+                    <svg class="marker" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                        <path pathLength="1" vector-effect="non-scaling-stroke"
+                              d="M 70 16 C 150 0, 330 4, 382 38 C 414 64, 370 108, 220 114 C 90 118, 8 100, 10 62 C 12 28, 96 10, 196 8 C 254 7, 304 12, 336 22"/>
+                    </svg>
+                </div>
+
+                <p class="place">Samedi 5 &amp; dimanche 6 juin 2027<br>Le Triangle · Huningue</p>
+                <p class="days bangers" id="countdown" hidden></p>
+
+                <div class="logos">
+                    <img src="../acps/popcornala.png" alt="Pop'Cornala">
+                    <span class="times" aria-label="et">×</span>
+                    <img src="../acps/logo-negitachi.png" alt="Negitachi">
+                </div>
+
+                <div class="agenda">
+                    <p class="agenda-label">Ajouter à mon agenda :</p>
+                    <div class="btns">
+                        <a class="btn btn-primary" target="_blank" rel="noopener"
+                           href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=ACPS%202%20%E2%80%93%20A%20Cappella%20Pop%20Show&amp;dates=20270605%2F20270607&amp;location=Le%20Triangle%2C%2068330%20Huningue&amp;details=Pop%27Cornala%20%C3%97%20Negitachi%20%3A%20le%20retour%20de%20l%27A%20Cappella%20Pop%20Show%20!%20Horaires%20et%20billetterie%20%C3%A0%20venir%20%3A%20https%3A%2F%2Fwww.popcornala.fr%2Facps2%2F">
+                            <i class="fab fa-google" aria-hidden="true"></i> Google Agenda
+                        </a>
+                        <a class="btn btn-yellow" href="acps2.ics">
+                            <i class="fas fa-calendar-plus" aria-hidden="true"></i> Apple, Outlook… (.ics)
+                        </a>
+                    </div>
+                    <p class="see-teaser">
+                        <a class="btn" href="#teaser"><i class="fas fa-play" aria-hidden="true"></i> Voir le teaser</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="shadow-row">
+                <figure class="shadow shadow-1 hero-shadow-l">
+                    <img src="media/ombre-1.png" alt="Une mystérieuse silhouette, grande et feuillue">
+                </figure>
+                <figure class="shadow shadow-2">
+                    <img src="media/ombre-2.png" alt="Une autre silhouette mystère, ronde et toute bouclée">
+                </figure>
+            </div>
+        </div>
+    </header>
+
+    <!-- Teaser -->
+    <section id="teaser">
+        <div class="wrap">
+            <h2 class="h2 bangers">Mais qui sont ces deux ombres ?</h2>
+            <p class="lead">Elles ont un message pour vous… Réponse très bientôt&nbsp;!</p>
+            <div class="card video-card">
+                <video controls playsinline preload="metadata" poster="media/notez-la-date-affiche.jpg"
+                       aria-describedby="teaser-desc">
+                    <source src="media/notez-la-date.mp4" type="video/mp4">
+                    Votre navigateur ne lit pas cette vidéo :
+                    <a href="media/notez-la-date.mp4">téléchargez-la ici</a>.
+                </video>
+            </div>
+            <p class="sound" id="teaser-desc">
+                🔊 Avec le son, c'est mieux&nbsp;! Deux silhouettes mystère, un roulement de tambour…
+                et toujours pas de réponse. Mais la date, elle, n'est plus un secret.
+            </p>
+        </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section id="infos">
+        <div class="wrap">
+            <h2 class="h2 bangers">Infos pratiques</h2>
+            <p class="lead">Tout ce qu'on peut déjà vous dire (le reste est top secret).</p>
+            <div class="infos">
+                <div class="card info">
+                    <span class="info-icon" style="background: var(--color-pink-bubble);"><i class="fas fa-calendar-days" aria-hidden="true"></i></span>
+                    <h3 class="bangers">Quand ?</h3>
+                    <p><strong>Samedi 5 &amp; dimanche 6 juin 2027</strong></p>
+                    <small>Horaires annoncés prochainement</small>
+                </div>
+                <div class="card info">
+                    <span class="info-icon" style="background: var(--color-blue-cinema);"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                    <h3 class="bangers">Où ?</h3>
+                    <p><strong>Le Triangle</strong><br>68330 Huningue</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Triangle%2C%2068330%20Huningue"
+                       target="_blank" rel="noopener">Voir sur la carte <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+                <div class="card info">
+                    <span class="info-icon" style="background: var(--color-yellow-popcorn); color: var(--color-text-default);"><i class="fas fa-ticket" aria-hidden="true"></i></span>
+                    <h3 class="bangers">Billetterie ?</h3>
+                    <p><strong>Pas encore ouverte</strong></p>
+                    <small>Notez la date et suivez-nous : on vous prévient dès l'ouverture&nbsp;!</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- On remet ça -->
+    <section id="retour">
+        <div class="wrap">
+            <h2 class="h2 bangers">On remet ça !</h2>
+            <div class="card">
+                <p>
+                    Les 4 et 5 octobre 2025, l'Église de Garnison de Huningue accueillait le tout premier
+                    <strong>A Cappella Pop Show</strong>&nbsp;: la rencontre des <strong>Pop'Cornala</strong>
+                    et des <strong>Negitachi</strong> autour des musiques de l'imaginaire.
+                </p>
+                <p>
+                    Pour la deuxième édition, on change de salle, on garde le mystère&nbsp;:
+                    le programme ne sera révélé que le jour&nbsp;J&nbsp;!
+                </p>
+                <ul class="universes" aria-label="Au programme">
+                    <li>🎮 Jeux vidéo</li>
+                    <li>🎬 Films &amp; séries</li>
+                    <li>🎌 Anime &amp; manga</li>
+                    <li>🌐 Mèmes d'Internet</li>
+                </ul>
+                <div class="duo">
+                    <div class="group">
+                        <img src="../acps/popcornala.png" alt="Logo Pop'Cornala">
+                        <div>
+                            <h3 class="bangers">🍿 Pop'Cornala</h3>
+                            <p><strong>Huningue, Alsace</strong> · ensemble vocal a cappella pop-culture</p>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <img src="../acps/logo-negitachi.png" alt="Logo Negitachi">
+                        <div>
+                            <h3 class="bangers">🥬 Negitachi</h3>
+                            <p><strong>Paris</strong> · « poireaux » en japonais, groupe vocal des musiques de l'imaginaire</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="center" style="margin: 22px 0 0;">
+                    <a class="btn" href="../acps/"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> Revoir l'édition 2025</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réseaux -->
+    <section id="suivre">
+        <div class="wrap">
+            <h2 class="h2 bangers">Suivez l'aventure</h2>
+            <p class="lead">D'ici juin, nos deux ombres préparent des surprises (et des devinettes…).</p>
+            <div class="follow">
+                <div class="card">
+                    <h3 class="bangers">Pop'Cornala</h3>
+                    <div class="socials">
+                        <a class="social" href="https://www.instagram.com/popcornalamusique/" target="_blank" rel="noopener" aria-label="Pop'Cornala sur Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a class="social" href="https://www.tiktok.com/@popcornala" target="_blank" rel="noopener" aria-label="Pop'Cornala sur TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                        <a class="social" href="https://www.facebook.com/popcornala" target="_blank" rel="noopener" aria-label="Pop'Cornala sur Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a class="social" href="https://www.youtube.com/@popcornala" target="_blank" rel="noopener" aria-label="Pop'Cornala sur YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="bangers">Negitachi</h3>
+                    <div class="socials">
+                        <a class="social" href="https://negitachi.fr" target="_blank" rel="noopener" aria-label="Site des Negitachi"><i class="fas fa-globe" aria-hidden="true"></i></a>
+                        <a class="social" href="https://www.facebook.com/negitachi" target="_blank" rel="noopener" aria-label="Negitachi sur Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a class="social" href="https://www.youtube.com/user/Negitachi" target="_blank" rel="noopener" aria-label="Negitachi sur YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="hashtags">#ACPS2 #ACappellaPopShow #PopCornala #Negitachi</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <p class="bangers" style="font-size: 1.6rem; line-height: 1.2;">ACPS 2 · 5 &amp; 6 juin 2027<br>Le Triangle, Huningue</p>
+            <p>Une question ? <a href="mailto:contact@popcornala.fr">contact@popcornala.fr</a></p>
+            <p><small>© 2026 Pop'Cornala</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Compte à rebours jusqu'au samedi 5 juin 2027 (en jours, heure locale)
+        (function () {
+            var el = document.getElementById('countdown');
+            var now = new Date();
+            var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var days = Math.round((new Date(2027, 5, 5) - today) / 864e5);
+            if (days > 1) {
+                el.textContent = 'J-' + days + ' · plus que ' + days + ' jours !';
+            } else if (days === 1) {
+                el.textContent = "C'est demain !";
+            } else if (days >= -1) {
+                el.textContent = "C'est ce week-end !";
+            } else {
+                return;
+            }
+            el.hidden = false;
+        })();
+    </script>
+</body>
+
+</html>
